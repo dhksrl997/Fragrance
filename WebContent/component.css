@@ -1,0 +1,335 @@
+/*---------로고 위치--------------*/
+.logo{
+    --background: pink;
+    height: 70px;
+    width: 300px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/*--------헤더 위치------------*/
+
+
+.header-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* .search{
+    justify-content: flex-start;
+}
+.logo{
+    justify-content: center;
+}
+.member-menu{
+    justify-content: flex-end;
+} */
+  
+
+
+/*----------------------검색-----------------------------*/
+
+/* .search{
+    display: inline-block;
+    position: absolute;
+    left:250px;
+    top:25px;
+} */
+.search{
+    margin-left: 40px;
+}
+
+.search>div{
+    display: flex;
+    align-items: center;
+}
+.search input[type="submit"]{
+    border: 0px;
+    height:25px;
+    width: 31px;
+    text-indent: -9999px;
+  
+
+}
+.search input[type="text"]{
+    
+    border:solid 5px #5e4719;
+    
+    border-radius: 75px;
+}
+
+
+/*-----------------------로그인 및 회원 정보 -----------------*/
+
+/* .member-menu{
+    display: inline-block;
+    position: absolute;
+    right:250px;
+    top:25px;  
+} */
+.member-menu{
+    margin-right: 40px;
+}
+    .member-menu>ul{
+        display:flex;
+        font-family: "맑은 고딕", "고딕", Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        color: #000;
+    }
+        .member-menu>ul>li{
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+/*--------------------상단 메인 메뉴---------------------*/
+.main-category{
+    height: 60px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    background-color: rgb(255, 255, 255, 0.8);
+    z-index: 999;
+    --margin-left: 60px;
+
+
+}
+    .main-menu ul {
+        display: flex;
+        justify-content: center;
+        font-family: "맑은 고딕", "고딕", Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 50px;
+        color: #000;
+        text-decoration: none;
+         
+    }
+        .main-menu >ul >li{
+           
+            padding-right: 70px; 
+            padding-left: 70px; 
+        }
+ .main-menu a{
+    color:#000;
+    --background: white;
+ }
+  .main-menu a:hover{
+    color:#9b0074;
+ }
+
+/*------body (서브메뉴부터 footer전까지)-----*/
+#body{
+    display: flex;
+    justify-content: center;
+}
+
+
+/*------------------------sub menu------------------------------*/
+
+.sub-menu>ul {
+    display: flex;
+    justify-content: center;
+    font-family: "맑은 고딕", "고딕", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.sub-menu>ul>li {
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.sub-menu a {
+    color: #000;
+    background: white;
+}
+
+.sub-menu a:hover {
+    color: #9b0074;
+}
+
+
+/*---------------1위 상품------------------*/
+.best-item{
+    display: flex;
+    padding-top: 10px;
+    font-size: 23px;
+}
+.best-item>div>h2{
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.best-item-m{
+    padding-right: 10px;
+    display: flex;
+    height: 250px;
+    font-size: 15px;
+}
+    .best-item-m>div{
+        display: flex;
+        justify-content: center;
+        --background: grey;
+    } 
+    .best-item-m>div img{
+        display: flex;
+        justify-content: center;
+        height:200px; 
+        width: 150px;
+        padding-top: 30px;
+    }
+    .best-item-m>div>ul{
+        padding-top: 50px;
+    }
+        .best-item-m>div>ul>li{
+            padding-top: 10px;
+        }           
+
+
+.best-item-w{
+    padding-left: 10px;
+    display: flex;
+    height: 250px;
+    font-size: 15px;
+    }
+    .best-item-w>div{
+        display: flex;
+        justify-content: center;
+        --background: rgb(172, 116, 116);
+    } 
+    .best-item-w>div img{
+        display: flex;
+        justify-content: center;
+        height:200px; 
+        width: 150px;
+        padding-top: 30px;
+    }
+    .best-item-w>div>ul{
+        padding-top: 50px;
+    }
+        .best-item-w>div>ul>li{
+            padding-top: 10px;
+        } 
+
+/*------------1위 상품 광고------------------*/
+.opacity-video{
+    width:1450px;
+    background-color: rgba(170, 38, 38, 0.8);
+
+}
+
+
+.ad-video{
+    --background-color: #9b0074;
+    display: flex;
+    text-align: center;
+ 
+    justify-content: center;
+ 
+}
+    .ad-video>ul{
+        
+        /* display: flex;
+        justify-content: space-between; */
+    }
+        .ad-video>ul>li{ 
+/*li만 속성이 먹혀야지 동영상 사이즈가 안밀림. 방법 찾아야함.*/
+            padding-left:130px;
+            padding-right:130px;
+            padding-top: 10px;
+        }
+
+ .ad-video-m{
+     z-index:-999;
+    visibility: visible; 
+    width: 1450px; 
+    height: 700px; 
+    --margin-left: -249.5px; 
+    padding-top: 50px;
+}
+.ad-video-w{
+    visibility: visible; 
+    width: 1450px; 
+    height: 700px; 
+    --margin-left: -249.5px; 
+    padding-top: 50px;
+} 
+
+/*------------추천 상품------------------*/
+
+.recomm>h1{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    font-size: 23px;
+    
+}
+.recomm ul{
+    display: flex;
+    justify-content: center;
+    height: 300px;
+}
+    .recomm li{
+        padding-top: 10px;
+        padding-left: 150px;
+        padding-right: 150px;
+        --background: blanchedalmond;
+        
+        
+    }
+    .recomm>div>ul>li{
+        margin-top: 10px;
+        margin-left: 50px;
+        background-color: rgb(9, 97, 88);
+      }
+/*------------footer------------------*/
+.footer-container{
+    text-align: center;
+    background: rgb(11, 71, 11);
+    
+}
+
+.rank-category{
+height: 500px;
+background-color: aqua;
+margin-bottom: 70px;
+display: flex;
+}
+.rank-category>div{
+    width: 200px;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+.rank-category>ul{
+    display: flex;
+    flex-grow: 1;
+}
+.rank-category li{
+    margin-left: 20px;
+    width: 500px;
+    background-color: blueviolet;
+}
+.rank-category-img{
+    height: 400px;
+    background-color: brown;
+}
+
+.product-detail{
+display: flex;
+height: 500px;
+background-color: yellow;
+margin-top: 100px;
+
+}
+.product-detail-img{
+width: 600px;
+background-color: #9b0074;
+}
+.heart{
+    display: flex;
+    justify-content: flex-end;
+}

@@ -1,0 +1,104 @@
+#header{
+    height: 130px;
+    --background: red;
+}
+
+.header-menu>div {
+    display: flex;
+    justify-content: center;
+}
+
+/*-----------------로고----------------*/
+
+.logo{
+    
+}
+
+
+/*--------------------검색창--------------------*/
+.search{
+    --background: orange;
+    height: 40px;
+}
+
+
+/*----------로그인-------------*/
+.member-menu{
+    --background: skyblue;
+    height: 40px;
+}
+
+
+
+/*-----------------배너----------------------------------*/
+#banner{
+    margin-top: 10px;
+    height: 366px;
+    background: url("../CSS/images/banner2.png") no-repeat center yellow;;
+     
+}
+    #banner .content-container{
+        width: 960px;
+        height: 100%;
+    /* background: #313131 url("../../HTML/customer/notice/images/hybrid_main.png") no-repeat center;  */
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+#body{
+    height:auto;
+    --background: silver;
+}
+.main{
+    height:max-content;
+    width: 1240px; 
+}
+.sub-menu{
+    margin-top: 10px;
+    padding-top: 20px;
+    height: 100px;
+    width: 1240px;
+    /* margin-left: 130px; */
+    /*margin-left: 350px;*/
+}
+
+.best-item{
+    margin-top: 30px;
+    height: 330px;
+    width: 1240px;
+    background: orchid;
+    display: flex;
+    justify-content: center;
+
+}
+.best-item h2{
+    padding-top: 10px;
+    text-align: center;
+    padding-left: 150px;
+    padding-right: 150px;
+    background: blanchedalmond;
+}
+
+
+
+.ad-video{
+    margin-top: 30px;
+    height: 400px;
+    width: 1240px;
+    background: powderblue;
+}
+
+.recomm{
+    margin-top: 30px;
+    height: 400px;
+    width: 1240px;
+    background: salmon;
+}
+
+#footer{
+    height: 30px;
+    margin-top: 10px;
+}
+.footer-container{
+    height: 100%;
+}

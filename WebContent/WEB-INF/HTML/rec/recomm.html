@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../css/reset.css" type="text/css" rel="stylesheet">
+    <link href="../../css/rec/style.css" type="text/css" rel="stylesheet">
+    <link href="../../css/rec/component.css" type="text/css" rel="stylesheet">
+    <title>Bon Parfum</title>
+</head>
+
+<body>
+   <!-- -----header menu------------------------------- -->
+    <header id="header">
+        <section class="header-menu">
+            <div class="content-container">
+            
+                <nav class="search">
+                    <h1 class="d-none">검색폼</h1>
+                    <form >
+                        <fieldset>
+                            <div>
+                                <legend class="d-none">검색폼</legend>
+                                <label>검색</label>
+                                <input type="text" name="query">
+                                <input type="submit" value="검색">
+                            </div>
+                        </fieldset>
+                    </form>
+                </nav>
+
+                <nav class="logo">
+                    <h1><a href="../../index.html"><img src="../../images/logo.png"/></a></h1>
+                </nav>
+
+                <nav class="member-menu">
+                    <h1 class="d-none">로그인메뉴</h1>
+                    <ul>
+                        <li><a href="">로그인</a></li>
+                        <li><a href="">회원가입</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <section>
+                <h1 class="d-none">메인 메뉴</h1>
+                <nav class="main-menu">
+                    <h1 class="d-none">메인 메뉴</h1> 
+                    <ul>
+                        <li><a href="../rank/index.html">Rank</a></li>
+                        <li><a href="../celeb/celeb.html">Celeb</a></li>
+                        <li><a href="../rec/recomm.html">Recomm.</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </section>
+    </header>
+
+    <!-- -----top / end bt------------------------------- -->
+    <div class="top-end-bt">
+        <a class="top" href="#header">
+            <img src="../../images/top.png"> 
+        </a>
+        <a class="end" href="#footer">
+            <img src="../../images/end.png"> 
+        </a>
+    </div>
+
+    <!-- -------------main------------------------------- -->
+    <div id="body">
+        <main class="recomm-main">
+
+            <div class="mainbn-recomm">
+                <h1 class="d-none">메인 컨텐츠</h1>
+                <section class="left-mainbn">
+                    <h1 class="d-none">향수 컨셉 이미지 영역 (좌)</h1>
+                </section>
+                
+                <h1 class="d-none">취향 설문 영역 (우)</h1>
+                <section class="right-contents">
+                    <h1>취향 분석을 통해 <br>추천 받을 향수를 찾아보세요!</h1><br>
+                    <form class="leftbt">
+                        <label>Q. 성별은 무엇인가요?</label><br>
+                        <a href="servey.html"><input type="button" value="여성" ></a>
+                        <a href="servey.html"><input type="button" value="남성" ></a>
+                    </form>
+                </section>
+            </div>  
+
+    
+            <div class="fragrances-recomm">
+                <h1 class="d-none">태그별 추천 컨텐츠</h1>
+                <section>
+                    <h1 class="d-none">향수 추천 태그명</h1>
+                    <nav>
+                        <h1>지금 인기있는 향수 TOP-12를 추천합니다!</h1>
+                        <ul class="tag-box">
+                            <li><a href="/&tag=star"># 별자리</a></li>
+                            <li><a href="/&tag=10"># 10대</a></li>
+                            <li><a href="/&tag=20"># 20대</a></li>
+                            <li><a href="/&tag=30"># 30대</a></li>
+                            <li><a href="/&tag=40"># 40대</a></li>
+                            <li><a href="/&tag=special"># 기념일</a></li>
+                            <li><a href="/&tag=women"># 남자가좋아하는여자향수</a></li>
+                            <li><a href="/&tag=men"># 여자가좋아하는남자향수</a></li>
+                            <li><a href="/&tag=summer"># 여름향수</a></li>
+                        </ul>
+                    </nav>
+                </section>
+    
+                <section>
+                    <h1 class="d-none">추천 향수 상품 목록</h1>
+                    
+                    <!-- <div class="recomm-tag-prdlist">
+                        <a href="#"  alt="태그별 배너 노출 스크립트">
+                            <div class="prdinfo-warp-img">
+                                <img src="../" alt="여자가 좋아하는 남자 향수 추천">
+                            </div>	
+                            <div class="prdinfo-warp-text">
+                                <span class="prdinfo-tit">잉글리쉬 페어 앤 프리지아 코롱</span>
+                                <p class="prdinfo-subtit">조 말론 런던</p>
+                            </div>
+                        </a>		
+                    </div> -->
+
+                    <div class="recomm-tag-prdlist">
+                        <div class="moveBtn-pre">
+                            <img src="../../images/prebt.png"> 
+                        </div>
+
+                        <ul class="prdinfo-warp">
+                            <li><a href="prd-detail.html">
+                                <div class="prdinfo-warp-img">
+                                    <img src="../../images/tag-prd-byredo01.png"> 
+                                </div>
+                                <div class="prdinfo-warp-text">
+                                    <span>인플로레센스 오 드 퍼퓸</span>
+                                    <p class="prdname">바이레도</p>
+                                </div>
+                            </a></li>
+
+                            <li><a href="prd-detail.html">
+                                <div class="prdinfo-warp-img">
+                                    <img src="../../images/tag-prd-dip01.png">
+                                </div>
+                                <div class="prdinfo-warp-text">
+                                    <span>샤워 오일 도손</span>
+                                    <p>딥디크</p>
+                                </div>
+                            </a></li>
+
+                            <li><a href="prd-detail.html">
+                                <div class="prdinfo-warp-img">
+                                    <img src="../../images/tag-prd-jomal01.png">
+                                </div>
+                                <div class="prdinfo-warp-text">
+                                    <span>잉글리쉬 페어 앤 프리지아 코롱</span>
+                                    <p>조말론 런던</p>
+                                </div>
+                            </a></li>
+
+                            <li><a href="prd-detail.html">
+                                <div class="prdinfo-warp-img">
+                                    <img src="../../images/tag-prd-dipd02.png">
+                                </div>
+                                <div class="prdinfo-warp-text">
+                                    <span>도손 오 드 퍼퓸</span>
+                                    <p>딥디크</p>
+                                </div>
+                            </a></li>
+                        </ul>
+
+                        <div class="moveBtn-next">
+                            <img src="../../images/nextbt.png"> 
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+        </main>
+    </div>
+</body>
+<!-- ------------footer------------------------------- -->
+<footer id="footer">
+    <div class="footer-container">
+        Copyright 2020. Group5. All rights reserved.
+    </div>
+</footer>
+
+</html>

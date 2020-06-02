@@ -1,0 +1,8 @@
+@import url(layout.css);
+@import url(ranklistcomponent.css); 
+
+.d-none{
+    display: none;
+/*<h1 class="d-none">강좌검색 폼</h1> 
+    헤더에 h1 설정했던 부분 스타일 안먹게 설정하는 것*/
+}
