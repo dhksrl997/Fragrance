@@ -1,0 +1,259 @@
+/*---------로고 위치--------------*/
+.logo{
+    height: 70px;
+    width: 300px;
+    text-align: center;
+}
+
+/*--------헤더 위치------------*/
+#header{
+    padding-top: 15px;
+}
+    .content-container {
+        display: flex;
+        justify-content: center;
+        --background: grey;
+    } 
+
+
+/*----------------------검색-----------------------------*/
+
+.search{
+    display: inline-block;
+    position: absolute;
+    left:250px;
+    top:25px;
+}
+
+.search>div{
+    display: flex;
+    align-items: center;
+}
+.search input[type="submit"]{
+    border: 0px;
+    height:25px;
+    width: 31px;
+}
+.search input[type="text"]{
+  flex-grow: 1;
+}
+
+
+/*-----------------------로그인 및 회원 정보 -----------------*/
+
+.member-menu{
+    display: inline-block;
+    position: absolute;
+    right:250px;
+    top:25px;  
+    text-decoration: none;
+}
+    .member-menu>ul{
+        display:flex;
+        font-family: "맑은 고딕", "고딕", Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        font-size: 15px;
+        color: #000;
+    }
+        .member-menu>ul>li{
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+        .member-menu>ul>li>a{
+            color:#000;
+            text-decoration: none;
+        }
+
+
+/*--------------------상단 메인 메뉴---------------------*/
+
+    .main-menu ul {
+        display: flex;
+        justify-content: center;
+        font-family: "맑은 고딕", "고딕", Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 27px;
+        color: #000;
+        text-decoration: none;
+         
+    }
+        .main-menu >ul >li{
+            padding-top:10px;
+            padding-right: 70px; 
+            padding-left: 70px; 
+        }
+ .main-menu a{
+    color:#000;
+    font-size: 30px;
+ }
+  .main-menu a:hover{
+    color:slateblue;
+    text-decoration: none;
+ }
+
+/*------body (서브메뉴부터 footer전까지)-----*/
+#body{
+    display: flex;
+    justify-content: center;
+}
+
+
+/*------------------------sub menu------------------------------*/
+.sub-menu >ul{
+    display: flex;
+    justify-content: center;
+    font-family: "맑은 고딕", "고딕", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+    .sub-menu >ul >li{
+        padding-top:10px; 
+        padding-right: 50px; 
+        padding-left: 50px; 
+    }
+ .sub-menu a{
+    color:#000;
+    background: white;
+ }
+  .sub-menu a:hover{
+    color:#9b0074;
+ }
+/*--------------지욱result main start ---------------------*/
+
+/* -------추천상품 타이틀-------------- */
+.recomm-title{
+    font-family: '맑음';
+    font-size: 30px;
+    --font-weight:0;
+    text-align: center;
+    padding: 110px 0 70px;
+    background:white;
+    width: 1240px;
+}
+
+/* -------추천상품 3가지 목록------ */
+.recomm-tag-prdlist {
+    width: 1240px;
+    height: 420px;
+    background:white;
+    position: relative;
+    display: flex;
+    font-family: "Noto Sans KR", Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 60px;
+ }
+ 
+ .prdinfo-warp {
+    width: 1240px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+ }
+
+ .prdinfo-warp li{
+    height: 300px;
+ }
+ 
+    .prdinfo-warp>li>a {
+       text-decoration: none;
+       color: #000;
+       width: 310px;
+       height: 420px;
+       margin-top: 0;
+    }
+ 
+    .prdinfo-warp .prdinfo-warp-img {
+       display: inline-block;
+       width: 290px;
+       height: 350px;
+    }
+ 
+    .prdinfo-warp .prdinfo-warp-text {
+       align-items: center;
+       height: 50px;
+       text-align: center;
+       font-size: 12px;
+    }
+ 
+       .prdinfo-warp-text>span {
+          font-size: 18px;
+          font-weight: 400;
+          letter-spacing: -1.2px;
+          text-decoration: none;
+          padding: 20px 0;
+       }
+ 
+       .prdinfo-warp-text>p {
+          margin-top: 10px;
+          text-decoration: none;
+       }
+/* ------------------선택결과--------------------- */
+
+.select-result-title{
+    font-family: '맑음';
+    font-size: 30px;
+    text-align: center;
+    padding : 110px 0 70px;
+    background:white;
+    width: 1240px;
+
+}
+.select-result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.select-result-list ul{
+    display: flex;
+    background-color: white;
+    width: 1240px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 80px;
+}
+
+    .select-result-list ul li{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 100px;
+        background: rgb(59, 55, 55);
+        color: white;
+        margin: 0 15px 0;
+        border-radius:100px;
+    }
+
+        .select-result-list ul li span:first-child{
+            font-size: 18px;
+            color: rgb(221, 223, 97);
+            padding-bottom: 5px;
+        }
+
+        .select-result-list ul li span:last-child{
+            font-size: 30px;
+        }
+
+
+/*--------------지욱result main end ---------------------*/
+
+/*------------footer------------------*/
+.footer-container{
+    font-size: 14px;
+    font-weight: 200;
+    color: gray;
+    margin-top: 100px;
+    text-align: center;
+    width: 100%;
+    padding: 50px 0;
+    background:whitesmoke;
+    
+}
+
+

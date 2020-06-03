@@ -17,7 +17,7 @@ public class RankServices {
 	public List<Items> getMansItemList() throws SQLException, ClassNotFoundException {
 		List<Items> list = new ArrayList<>();
 		int index = 0;
-		String sql = "Select * from Items order by maleLike desc LIMIT 3;";
+		String sql = "Select * from Items order by maleLike desc;";
 		String url = "jdbc:mysql://dev.notepubs.com:9898/fragrance?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
@@ -35,8 +35,7 @@ public class RankServices {
 					rs.getString("scent"),
 					rs.getString("sex"),
 					rs.getInt("maleLike"),
-					rs.getInt("femaleLike"),
-					rs.getString("content")
+					rs.getInt("femaleLike")
 					);
 			list.add(items);
 		}
@@ -50,7 +49,7 @@ public class RankServices {
 		List<Items> list = new ArrayList<>();
 		int index = 0;
 		
-		String sql = "Select * from Items order by femaleLike desc LIMIT 3;";
+		String sql = "Select * from Items order by femaleLike desc;";
 		String url = "jdbc:mysql://dev.notepubs.com:9898/fragrance?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
@@ -68,8 +67,7 @@ public class RankServices {
 					rs.getString("scent"),
 					rs.getString("sex"),
 					rs.getInt("maleLike"),
-					rs.getInt("femaleLike"),
-					rs.getString("content")
+					rs.getInt("femaleLike")
 					);
 			list.add(items);
 		}
@@ -83,7 +81,7 @@ public class RankServices {
 		List<Items> list = new ArrayList<>();
 		int index = 0;
 		
-		String sql = "SELECT *,maleLike+femaleLike as Likeresult FROM Items order by Likeresult DESC LIMIT 3";
+		String sql = "SELECT *,maleLike+femaleLike as Likeresult FROM Items order by Likeresult DESC";
 		String url = "jdbc:mysql://dev.notepubs.com:9898/fragrance?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
@@ -101,8 +99,7 @@ public class RankServices {
 					rs.getString("scent"),
 					rs.getString("sex"),
 					rs.getInt("maleLike"),
-					rs.getInt("femaleLike"),
-					rs.getString("content")
+					rs.getInt("femaleLike")
 					);
 			list.add(items);
 		}
@@ -132,7 +129,6 @@ public class RankServices {
 		st.setString(8, items.getSex());
 		st.setInt(9, items.getMaleLike());
 		st.setInt(10, items.getFemaleLike());
-		st.setString(11, items.getContent());
 		result = st.executeUpdate();
 		st.close();
 		con.close();

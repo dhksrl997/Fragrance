@@ -25,7 +25,7 @@
     height: 40px;
 }
 
-
+/*-------------------------------------지욱(survey)main start-------------------------- */
 /*-------------설문전체크기-------------*/
 .matching-perfume{
     height: 1000px;
@@ -46,29 +46,77 @@ margin-top: 60px;
 }
 
     .matching-perfume .matching-perfume-head h1{
-        padding: 80px 0;
+        padding-top: 80px;
+        padding-bottom: 40px;
         font-family: '맑음';
         font-size: 40px;
         font-weight: 200;
     }
 
     .matching-perfume .matching-perfume-head div{
-        padding-bottom: 40px;
         font-family: '맑음';
         font-size: 26px;
         font-weight: 500;
     }
 
-/*-------------설문리스트-------------*/
-    .matching-perfume-list{
-        position: relative;
+    .matching-perfume-head ul{
+        display: flex;
+        padding-bottom: 60px;
     }
+
+    .matching-perfume-head ul li{
+        border: solid 1px;
+        width: 12px;
+        height: 12px;
+        border-radius: 7px;
+        margin-left: 7.5px;
+        margin-right: 7.5px;
+    }
+
+
+    .matching-perfume-head .survey-page2 li:nth-child(2){
+        background: black;
+    }
+    
+    .matching-perfume-head .survey-page3 li:nth-child(3){
+        background: black;
+    }
+
+    .matching-perfume-head .survey-page4 li:nth-child(4){
+        background: black;
+    }
+    
+
+/*-------------설문리스트 전체 조정-------------*/
+.matching-perfume-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.matching-perfume-list ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 600px;
+    padding: 60px 0;
+}
+.matching-perfume-list .scent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 900px;
+    padding: 60px 0;
+}
 
     .matching-perfume-list ul a{
         display: flex;
-        align-items: center;
         width: 200px;
         height: 200px;
+        align-items: center;
         justify-content: center;
         --text-align: center;
         background:  black;
@@ -77,59 +125,101 @@ margin-top: 60px;
         border-radius:150px;
       }
 
-      
-      .matching-perfume-list ul a li{
-        background-color: black;
+/* 설문 목록 조정 */
+      .matching-perfume-list ul a{
+        margin:15px;
+        overflow: hidden;
       }
 
-        .matching-perfume-list ul a:nth-child(1){
-            position: absolute;
-            top: 50px;
-            left: 390px;
-        }
+         /* ---------------나이 --------------------*/
+            .matching-perfume-list .age a:nth-child(1):hover{
+                background: url("../../images/age/10-1.png") no-repeat center;
+                background-size: 250px;
+                text-indent: 9999px;
+            }
+
+            .matching-perfume-list .age a:nth-child(2):hover{
+                background: url("../../images/age/20.jpg") no-repeat;
+                background-size: 300px;
+                text-indent: 9999px;
+            }
+
+            .matching-perfume-list .age a:nth-child(3):hover{
+                background: url("../../images/age/30.jpg") no-repeat center;
+                background-size: 300px;
+                text-indent: 9999px;
+            }
+
+            .matching-perfume-list .age a:nth-child(4):hover{
+                background: url("../../images/age/40.jpg") no-repeat center;
+                background-size: 300px;
+                text-indent: 9999px;
+            }
+
+
+   
+            /* ---------------계절 --------------------*/
             .matching-perfume-list .season a:nth-child(1):hover{
-                background: url("../images/img/survey/spring1.jpg");
+                background: url("../../images/season/spring1.jpg");
+                text-indent: 9999px;
             }
 
-        .matching-perfume-list ul a:nth-child(3){
-            position: absolute;
-            top: 300px;
-            left: 390px;
-        }
             .matching-perfume-list .season a:nth-child(2):hover{
-                background: url("../images/img/survey/summer.jpg");
-                
+                background: url("../../images/season/summer.jpg");
+                text-indent: 9999px;
+
             }
 
-
-        .matching-perfume-list ul a:nth-child(2){
-            position: absolute;
-            top: 50px;
-            left: 650px;
-        }
             .matching-perfume-list .season a:nth-child(3):hover{
-                background: url("../images/img/survey/autumn.jpg");
-                
+                background: url("../../images/season/autumn.jpg");
+                text-indent: 9999px;
             }
 
-        .matching-perfume-list ul a:nth-child(4){
-            position: absolute;
-            top: 300px;
-            left: 650px;
-        }
             .matching-perfume-list .season a:nth-child(4):hover{
-                background: url("../images/img/survey/winter.jpg");
+                background: url("../../images/season/winter.jpg");
+                text-indent: 9999px;
+            }
+        /*--------------------- 향 -----------------------*/
+            .matching-perfume-list .scent a:nth-child(1):hover{
+                background: url("../../images/scent/floral.png");
+                background-size: 210px;
+                text-indent: 9999px;
+                }
+
+            .matching-perfume-list .scent a:nth-child(2):hover{
+                background: url("../../images/scent/citrus.png");
+                background-size: 210px;
+                text-indent: 9999px;
+                }
+
+            .matching-perfume-list .scent a:nth-child(3):hover{
+                background: url("../../images/scent/aqua.png");
+                background-size: 210px;
+                text-indent: 9999px;
+                }
                 
+            .matching-perfume-list .scent a:nth-child(4):hover{
+                background: url("../../images/scent/woody.png");
+                background-size: 210px;
+                text-indent: 9999px;
             }
 
+            .matching-perfume-list .scent a:nth-child(5):hover{
+                background: url("../../images/scent/powdery.png");
+                background-size: 210px;
+                text-indent: 9999px;
+            }
 
-
+            .matching-perfume-list .scent a:nth-child(6):hover{
+                background: url("../../images/scent/musk.jpg");
+                background-size: 210px;
+                text-indent: 9999px;
+            }
 
     /*이전 / 다음 버튼*/
 
     .matching-perfume-list div{
         display: flex;
-        position: absolute;
         top:600px;
         left: 467.5px;
         font-size: 16px;
@@ -143,13 +233,38 @@ margin-top: 60px;
             justify-content: center;
             align-items: center;
             background-color: white;
+            color : black;
+            text-decoration: none;
         }
         .matching-perfume-list div a:hover{
             background: black;
             color:white;
+            text-decoration: none;
         }
 
 
+        .matching-perfume-list div{
+            display: flex;
+            top:600px;
+            left: 467.5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+            .matching-perfume-list div a{
+                width: 150px;
+                height: 50px;
+                border: 1px solid black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+            }
+            .matching-perfume-list div a:hover{
+                background: black;
+                color:white;
+            }
+
+/* ------------------------------지욱(survey)main end----------------------------- */
 /*-------------풋터-------------*/
 #footer{
     height: 30px;

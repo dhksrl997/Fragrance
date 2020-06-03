@@ -1,8 +1,11 @@
 #header{
-    height: 120px;
+    height: 130px;
     background: red;
 }
-
+.header-menu>div {
+    display: flex;
+    justify-content: center;
+}
 
 /*-----------------로고----------------*/
 
@@ -24,73 +27,72 @@
     height: 40px;
 }
 
-
-
 /*-----------------배너----------------------------------*/
-#banner{
-    margin-top: 10px;
-    height: 366px;
-    background: url("../CSS/images/banner2.png") no-repeat center yellow;
-     
+.top-banner{
+    margin: 10px auto 0;
+    text-align: center;
+    display: block;
 }
-    #banner .content-container{
-        width: 960px;
-        height: 100%;
-    /* background: #313131 url("../../HTML/customer/notice/images/hybrid_main.png") no-repeat center;  */
-        margin-left:auto;
-        margin-right:auto;
+
+.middle-banner{
+    margin: 10px auto 0;
+    text-align: center;
+    display: block;
+   
+}
+
+/*-----------------메인----------------------------------*/
+
+.main{
+    height:max-content;
+    width: 1240px; 
+}
+.top-banner{
+    margin-top: 20px;
+    /* height: 400px; */
+    width: 1240px;
+}
+
+.grid-container1{
+    margin: 50px auto 0;
+    display: grid;
+
+    grid-template-columns: 350px 400px 400px;
+    grid-template-rows: 400px 400px;
+    grid-gap: 15px;
+    width: 1240px;
+    --background-color: black;
+    
+}
+
+.item1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
     }
 
-#body{
-    min-height: 1400px;
-   --background: rgb(0, 30, 128);
-}
-.main{
-    width: 1240px; 
-    height:max-content
-}
-.sub-menu{
-    margin-top: 10px;
-    padding-top: 20px;
-    height: 100px;
+    .item2 {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    }
+
+
+.middle-banner{
+    margin-top: 20px;
+    height: 400px;
     width: 1240px;
-    --background: blue;
-    /* margin-left: 130px; */
-    /*margin-left: 350px;*/
 }
 
-.best-item{
-    margin-top: 30px;
-    height: 330px;
+.grid-container2{
+    margin: 15px auto 0;
+    display: grid;
+    grid-template-columns: 585px 585px;
+    grid-template-rows: 300px;
+    grid-gap: 15px;
     width: 1240px;
-    --background: orchid;
-    display: flex;
     justify-content: center;
-
-}
-.best-item h2{
-    padding-top: 10px;
-    text-align: center;
-    padding-left: 150px;
-    padding-right: 150px;
-    --background: blanchedalmond;
 }
 
 
-
-.ad-video{
-    margin-top: 30px;
-    height: 400px;
-    width: 1240px;
-    --background: powderblue;
-}
-
-.recomm{
-    margin-top: 30px;
-    height: 400px;
-    width: 1240px;
-   --background: salmon;
-}
 
 #footer{
     height: 30px;
@@ -98,11 +100,5 @@
 }
 .footer-container{
     height: 100%;
-}
-.content-container{
-    width: 1240px;
-    min-height: 300px;
-    margin-left: auto;
-    margin-right: auto;
 }
 

@@ -48,9 +48,9 @@
                 <nav class="main-menu">
                     <h1 class="d-none">메인 메뉴</h1> 
                     <ul>
-                        <li><a href="../rank/index.html">Rank</a></li>
+                        <li><a href="../rank/rankIndex.jsp">Rank</a></li>
                         <li><a href="../celeb/celeb.html">Celeb</a></li>
-                        <li><a href="../rec/recomm.html">Recomm.</a></li>
+                        <li><a href="recomm.html">Recomm.</a></li>
                     </ul>
                 </nav>
             </section>
@@ -68,6 +68,7 @@
     </div>
 
     <!-- -------------main------------------------------- -->
+    <script src="../../js/rec/recomm.js"></script>
     <div id="body">
         <main class="recomm-main">
 
@@ -82,8 +83,8 @@
                     <h1>취향 분석을 통해 <br>추천 받을 향수를 찾아보세요!</h1><br>
                     <form class="leftbt">
                         <label>Q. 성별은 무엇인가요?</label><br>
-                        <a href="servey.html"><input type="button" value="여성" ></a>
-                        <a href="servey.html"><input type="button" value="남성" ></a>
+                        <a href="survey2.html?gender=woman"><input type="button" value="여성" ></a>
+                        <a href="survey2.html?gender=man"><input type="button" value="남성" ></a>
                     </form>
                 </section>
             </div>  
@@ -96,15 +97,16 @@
                     <nav>
                         <h1>지금 인기있는 향수 TOP-12를 추천합니다!</h1>
                         <ul class="tag-box">
-                            <li><a href="/&tag=star"># 별자리</a></li>
-                            <li><a href="/&tag=10"># 10대</a></li>
-                            <li><a href="/&tag=20"># 20대</a></li>
-                            <li><a href="/&tag=30"># 30대</a></li>
-                            <li><a href="/&tag=40"># 40대</a></li>
-                            <li><a href="/&tag=special"># 기념일</a></li>
-                            <li><a href="/&tag=women"># 남자가좋아하는여자향수</a></li>
-                            <li><a href="/&tag=men"># 여자가좋아하는남자향수</a></li>
-                            <li><a href="/&tag=summer"># 여름향수</a></li>
+                            <!-- 이부분은 싱글페이지로 -->
+                            <li><a href="/recomm?tag=star"># 별자리</a></li>
+                            <li><a href="/recomm?tag=10"># 10대</a></li>
+                            <li><a href="/recomm?tag=20"># 20대</a></li>
+                            <li><a href="/recomm?tag=30"># 30대</a></li>
+                            <li><a href="/recomm?tag=40"># 40대</a></li>
+                            <li><a href="/recomm?tag=special"># 기념일</a></li>
+                            <li><a href="/recomm?tag=women"># 남자가좋아하는여자향수</a></li>
+                            <li><a href="/recomm?tag=men"># 여자가좋아하는남자향수</a></li>
+                            <li><a href="/recomm?tag=summer"># 여름향수</a></li>
                         </ul>
                     </nav>
                 </section>
@@ -114,10 +116,10 @@
                     
                     <!-- <div class="recomm-tag-prdlist">
                         <a href="#"  alt="태그별 배너 노출 스크립트">
-                            <div class="prdinfo-warp-img">
+                            <div class="prdinfo-wrap-img">
                                 <img src="../" alt="여자가 좋아하는 남자 향수 추천">
                             </div>	
-                            <div class="prdinfo-warp-text">
+                            <div class="prdinfo-wrap-text">
                                 <span class="prdinfo-tit">잉글리쉬 페어 앤 프리지아 코롱</span>
                                 <p class="prdinfo-subtit">조 말론 런던</p>
                             </div>
@@ -125,51 +127,134 @@
                     </div> -->
 
                     <div class="recomm-tag-prdlist">
+                        <div class="prdinfo-wrap">
+
+                            <a href="prd-detail.html">
+                                <div class="prdinfo-wrap-img">
+                                    <img src="../../images/tag-prd-byredo01.png"> 
+                                </div>
+                                <div class="prdinfo-wrap-text">
+                                    <span>1111111111111111</span>
+                                    <p class="prdname">바이레도</p>
+                                </div>
+                            </a>
+                            
+                            <a href="prd-detail.html">
+                                <div class="prdinfo-wrap-img">
+                                    <img src="../../images/tag-prd-dip01.png">
+                                </div>
+                                <div class="prdinfo-wrap-text">
+                                    <span>22222222222222</span>
+                                    <p>딥디크</p>
+                                </div>
+                            </a>
+                            
+                            <a href="prd-detail.html">
+                                <div class="prdinfo-wrap-img">
+                                    <img src="../../images/tag-prd-jomal01.png">
+                                </div>
+                                <div class="prdinfo-wrap-text">
+                                    <span>333333333333333</span>
+                                    <p>조말론 런던</p>
+                                </div>
+                            </a>
+                            
+                            <a href="prd-detail.html">
+                                <div class="prdinfo-wrap-img">
+                                    <img src="../../images/tag-prd-dipd02.png">
+                                </div>
+                                <div class="prdinfo-wrap-text">
+                                    <span>444444444444</span>
+                                    <p>딥디크</p>
+                                </div>
+                            </a>
+                            
+                            <!-- 복사 -->
+                            <a href="prd-detail.html">
+                                <div class="prdinfo-wrap-img">
+                                    <img src="../../images/tag-prd-byredo01.png"> 
+                                </div>
+                                <div class="prdinfo-wrap-text">
+                                    <span>55555555555</span>
+                                    <p class="prdname">바이레도</p>
+                                </div>
+                            </a>
+                            
+                            <a href="prd-detail.html">
+                                <div class="prdinfo-wrap-img">
+                                    <img src="../../images/tag-prd-dip01.png">
+                                </div>
+                                <div class="prdinfo-wrap-text">
+                                    <span>66666666666666</span>
+                                    <p>딥디크</p>
+                                </div>
+                            </a>
+                            
+                            <a href="prd-detail.html">
+                                <div class="prdinfo-wrap-img">
+                                    <img src="../../images/tag-prd-jomal01.png">
+                                </div>
+                                <div class="prdinfo-wrap-text">
+                                    <span>777777777777777</span>
+                                    <p>조말론 런던</p>
+                                </div>
+                            </a>
+                            
+                            <a href="prd-detail.html">
+                                <div class="prdinfo-wrap-img">
+                                    <img src="../../images/tag-prd-dipd02.png">
+                                </div>
+                                <div class="prdinfo-wrap-text">
+                                    <span>88888888888888</span>
+                                    <p>딥디크</p>
+                                </div>
+                            </a>
+                            <!-- 복사 -->
+                            <a href="prd-detail.html">
+                                <div class="prdinfo-wrap-img">
+                                    <img src="../../images/tag-prd-byredo01.png"> 
+                                </div>
+                                <div class="prdinfo-wrap-text">
+                                    <span>999999999999999</span>
+                                    <p class="prdname">바이레도</p>
+                                </div>
+                            </a>
+                            
+                            <a href="prd-detail.html">
+                                <div class="prdinfo-wrap-img">
+                                    <img src="../../images/tag-prd-dip01.png">
+                                </div>
+                                <div class="prdinfo-wrap-text">
+                                    <span>10 10 10 10 10</span>
+                                    <p>딥디크</p>
+                                </div>
+                            </a>
+                            
+                            <a href="prd-detail.html">
+                                <div class="prdinfo-wrap-img">
+                                    <img src="../../images/tag-prd-jomal01.png">
+                                </div>
+                                <div class="prdinfo-wrap-text">
+                                    <span>11 11 11 11 11</span>
+                                    <p>조말론 런던</p>
+                                </div>
+                            </a>
+                            
+                            <a href="prd-detail.html">
+                                <div class="prdinfo-wrap-img">
+                                    <img src="../../images/tag-prd-dipd02.png">
+                                </div>
+                                <div class="prdinfo-wrap-text">
+                                    <span>12 12 12 12 12</span>
+                                    <p>딥디크</p>
+                                </div>
+                            </a>
+
+                        </div>
+
                         <div class="moveBtn-pre">
                             <img src="../../images/prebt.png"> 
                         </div>
-
-                        <ul class="prdinfo-warp">
-                            <li><a href="prd-detail.html">
-                                <div class="prdinfo-warp-img">
-                                    <img src="../../images/tag-prd-byredo01.png"> 
-                                </div>
-                                <div class="prdinfo-warp-text">
-                                    <span>인플로레센스 오 드 퍼퓸</span>
-                                    <p class="prdname">바이레도</p>
-                                </div>
-                            </a></li>
-
-                            <li><a href="prd-detail.html">
-                                <div class="prdinfo-warp-img">
-                                    <img src="../../images/tag-prd-dip01.png">
-                                </div>
-                                <div class="prdinfo-warp-text">
-                                    <span>샤워 오일 도손</span>
-                                    <p>딥디크</p>
-                                </div>
-                            </a></li>
-
-                            <li><a href="prd-detail.html">
-                                <div class="prdinfo-warp-img">
-                                    <img src="../../images/tag-prd-jomal01.png">
-                                </div>
-                                <div class="prdinfo-warp-text">
-                                    <span>잉글리쉬 페어 앤 프리지아 코롱</span>
-                                    <p>조말론 런던</p>
-                                </div>
-                            </a></li>
-
-                            <li><a href="prd-detail.html">
-                                <div class="prdinfo-warp-img">
-                                    <img src="../../images/tag-prd-dipd02.png">
-                                </div>
-                                <div class="prdinfo-warp-text">
-                                    <span>도손 오 드 퍼퓸</span>
-                                    <p>딥디크</p>
-                                </div>
-                            </a></li>
-                        </ul>
 
                         <div class="moveBtn-next">
                             <img src="../../images/nextbt.png"> 

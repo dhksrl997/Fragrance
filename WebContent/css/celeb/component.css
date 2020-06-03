@@ -8,46 +8,88 @@
 }
 
 /*--------헤더 위치------------*/
+#header{
+    padding-top: 15px;
+}
+    .content-container {
+        
+        display: flex;
+        justify-content: center;
+        background: grey;
+    } 
 
-
-.header-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/*----------------------검색-----------------------------*/
+.search{
+    display: inline-block;
+    position: absolute;
+    left:250px;
+    top:25px;
 }
 
-
-.search>div {
+.search>div{
     display: flex;
     align-items: center;
 }
-
-.search input[type="submit"] {
+.search input[type="submit"]{
     border: 0px;
-    height: 25px;
+    height:25px;
     width: 31px;
 }
-
-.search input[type="text"] {
+.search input[type="text"]{
     flex-grow: 1;
 }
 
 
+/*-----------------------로그인 및 회원 정보 -----------------*/
 
+.member-menu{
+    display: inline-block;
+    position: absolute;
+    right:250px;
+    top:25px;  
+}
+    .member-menu>ul{
+        display:flex;
+        font-family: "맑은 고딕", "고딕", Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        color: #000;
+    }
+        .member-menu>ul>li{
+            padding-right: 20px;
+            padding-left: 20px;
+        }
 
-.member-menu>ul {
+/*--------------------상단 메인 메뉴---------------------*/
+
+.main-menu ul {
     display: flex;
+    justify-content: center;
     font-family: "맑은 고딕", "고딕", Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 27px;
     color: #000;
+    text-decoration: none;
+     
+}
+    .main-menu >ul >li{
+        padding-top:10px;
+        padding-right: 70px; 
+        padding-left: 70px; 
+    }
+    .main-menu a{
+        color:#000;
+        background: white;
+        }
+.main-menu a:hover{
+color:#9b0074;
 }
 
-.member-menu>ul>li {
-    padding-right: 20px;
-    padding-left: 20px;
+/*------body (서브메뉴부터 footer전까지)-----*/
+#body{
+    display: flex;
+    justify-content: center;
 }
-
 
 .main-category {
     height: 60px;
@@ -88,271 +130,165 @@
     color: brown;
 }
 
-/*------body (서브메뉴부터 footer전까지)-----*/
-#body {
-    display: flex;
-    justify-content: center;
-}
 
 
-/*------------------------sub menu------------------------------*/
+/* ---------------------이미지----------------------- */
 
-.sub-menu>ul {
-    display: flex;
-    justify-content: center;
-    font-family: "맑은 고딕", "고딕", Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.sub-menu>ul>li {
-    padding-top: 10px;
-    padding-right: 50px;
-    padding-left: 50px;
-}
-
-.sub-menu a {
-    color: #000;
-    background: white;
-}
-
-.sub-menu a:hover {
-    color: #9b0074;
-}
-
-.footer-container {
-    text-align: center;
-    background: rgb(11, 71, 11);
-
-}
-
-.rank-category {
-    height: 500px;
-    background-color: aqua;
-    margin-bottom: 70px;
-    display: flex;
-}
-
-.rank-category>div {
-    width: 200px;
-    display: flex;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: center;
-}
-
-.rank-category>ul {
-    display: flex;
-    flex-grow: 1;
-}
-
-.rank-category li {
-    margin-left: 20px;
-    width: 500px;
-    background-color: blueviolet;
-}
-
-.rank-category-img {
-    height: 400px;
-    background-color: brown;
-}
-
-.product-detail {
-    display: flex;
-    height: 700px;
-    background-color: yellow;
-    margin-top: 100px;
-}
-
-.product-detail-img {
-    width: 600px;
-    background-color: #9b0074;
-}
-
-.title-bar{
-    display: flex;
-    position: relative;
-    left :300px;
-    
-}
-
-.title{  
-    margin-top:50px;
-    
-    font-family: 맑은 고딕, 고딕, sans-serif;
-    font-size: 50px;
-    font-weight: bold;
-    color: #646464;
-
-}
-
- .Cancel{
-    border: 1px solid black;
-    position: relative;
-    top:50px;
-    left: 250px; 
-    font-size:25px; 
-    color:blue;
-    height:40px;  
-} 
-
-.account-info{
-    display: flex;
-    font-size: 15px;
-    position: relative;
-    left :250px;
-    top :0px;
-}
-
-.account img{
-    --display: flex;
-    --justify-content: center;
-    height:350px; 
-    width: 300px;
-}
-
-.text-area{
-    display: flex;
-     position: relative;
-     left:00px;
-     top:50px;
-}
-
-
-.text-area
-input[type="text"]{ 
-    width: 200%;
-    padding: 12px 20px;
-    margin: 30px 0;
-    box-sizing: border-box;
-}
-
-.confirm-menu{
-    margin-top: 10px;
-    display: flex;
-    position: relative;
-    left :300px;
-}
-
-.confirm-menu ul {
-    display: flex;
-    justify-content: center;
-    font-family: "맑은 고딕", "고딕", Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 27px;
-    color: #000;
-    text-decoration: none;
-
-
-}
-
-.confirm-menu>ul>li {
-    border:1px solid black;
-
-    margin-left :200px;
-}
-
-.confirm-menu a {
-    color: #000;
-    --background: white;
-}
-
-.confirm-menu a:hover {
-    color: brown;
-}
-
-
-.grid-container1 {
-    margin-top: 100px;
-    display: grid;
-    grid-gap: 1px, 1px;
-    grid-template-columns: 350px 400px 400px;
-    grid-template-rows: 400px 400px;
-    justify-content: center;
-    grid-gap: 15px;
-    
-  }
-  
-.grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-  } 
-
-  .item1 {
-    grid-column: 1 / span 2;
-    grid-row: 1;
-    
-  }
-    .item1 img {
-        resize: both; /* 이미지 최대 사이즈에 적용 */
-        float: center; /* 가운데 정렬 */
-        max-width: 700px; /* 넓이를 지정 */
-        max-height: 500px;
-        height: auto; /* 높이를 지정 */
-        margin: 5px 0; /* 여백을 적용 4가지 조건이 가능 위쪽, 오른쪽, 아래쪽, 왼쪽 순서 */
-        
+.item1 img {
+    resize: both; /* 이미지 최대 사이즈에 적용 */
+    display: block;
+    margin : auto ;
+    max-width: 700px; /* 넓이를 지정 */
+    max-height: 500px;
     }
-  
-  .item2 {
-    grid-column: 3;
-    grid-row: 1 / span 2;
-    
-  }
+
     .item2 img {
+    display: block;
+    margin : auto ;
+    resize: both; /* 이미지 최대 사이즈에 적용 */
+    float: center; /* 가운데 정렬 */
+    max-width: 300px; /* 넓이를 지정 */
+    max-height: 1000px;
+    }
+
+    .item3 img {
+        display: block;
+        margin : auto ;
         resize: both; /* 이미지 최대 사이즈에 적용 */
         float: center; /* 가운데 정렬 */
         max-width: 300px; /* 넓이를 지정 */
-        max-height: 1000px;
-        height: auto; /* 높이를 지정 */
-        margin: 5px 0; /* 여백을 적용 4가지 조건이 가능 위쪽, 오른쪽, 아래쪽, 왼쪽 순서 */
-        
+        max-height: 500px;
+    }
+    .item4 img {
+        display: block;
+        margin : auto ;
+        resize: both; /* 이미지 최대 사이즈에 적용 */
+        float: center; /* 가운데 정렬 */
+        max-width: 310px; /* 넓이를 지정 */
+        max-height: 500px;
+    }
+    .item5 img {
+        display: block;
+        margin : auto ;
+        resize: both; /* 이미지 최대 사이즈에 적용 */
+        float: center; /* 가운데 정렬 */
+        max-width: 250px; /* 넓이를 지정 */
+        max-height: 250px;
+    }
+    .item6 img {
+        display: block;
+        margin : auto ;
+        resize: both; /* 이미지 최대 사이즈에 적용 */
+        float: center; /* 가운데 정렬 */
+        max-width: 250px; /* 넓이를 지정 */
+        max-height: 250px;
     }
 
-  .grid-container2 {
-    margin-top: 15px;
-    display: grid;
-    grid-template-columns: 585px 585px;
-    grid-template-rows: 300px;
+ /* --------------detail 설명------------- */
+ 
+.d-header{
+    background-color: gray;
+    display: flex;
     justify-content: center;
-    grid-gap: 15px;
-  }
+}
 
-        .item3 img {
-            resize: both; /* 이미지 최대 사이즈에 적용 */
-            float: center; /* 가운데 정렬 */
-            max-width: 300px; /* 넓이를 지정 */
-            max-height: 500px;
-            height: auto; /* 높이를 지정 */
-            margin: 5px 0; /* 여백을 적용 4가지 조건이 가능 위쪽, 오른쪽, 아래쪽, 왼쪽 순서 */
-            
+
+.description{
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    margin : auto;
+    border:1px solid black;
+    max-width: 1140px; 
+    max-height: 600px;
+    /* overflow: auto; */
+    /* opacity: 0.9; */
+    font-weight: bold;
+    z-index: 999;
+    /* border: 0px; */
+    
+
+    }
+
+    .close{ /* 기사 누르면 X 표시 눌러서 종료하는 버튼*/
+        position: absolute;
+        right: 10px;
+        top: 10px;
         }
-        .item4 img {
-            resize: both; /* 이미지 최대 사이즈에 적용 */
-            float: center; /* 가운데 정렬 */
-            max-width: 310px; /* 넓이를 지정 */
-            max-height: 500px;
-            height: auto; /* 높이를 지정 */
-            margin: 5px 0; /* 여백을 적용 4가지 조건이 가능 위쪽, 오른쪽, 아래쪽, 왼쪽 순서 */
-            
-        }
-        .item5 img {
-            resize: both; /* 이미지 최대 사이즈에 적용 */
-            float: center; /* 가운데 정렬 */
-            max-width: 250px; /* 넓이를 지정 */
-            max-height: 250px;
-            height: auto; /* 높이를 지정 */
-            margin: 5px 0; /* 여백을 적용 4가지 조건이 가능 위쪽, 오른쪽, 아래쪽, 왼쪽 순서 */
-            
-        }
-        .item6 img {
-            resize: both; /* 이미지 최대 사이즈에 적용 */
-            float: center; /* 가운데 정렬 */
-            max-width: 250px; /* 넓이를 지정 */
-            max-height: 250px;
-            height: auto; /* 높이를 지정 */
-            margin: 5px 0; /* 여백을 적용 4가지 조건이 가능 위쪽, 오른쪽, 아래쪽, 왼쪽 순서 */
-            
-        }
+
+    .d-img{ /* 기사 누르면 뜨는 이미지*/
+        width: 550px;
+        float: left;
+        z-index: 1000;
+        margin: 100px 20px;
+    }
+     .d-coment{
+        position: relative;
+        top:50px;
+        margin-right: 50px;
+        font-size: 20px;
+    }
+    
+    .d-title{ /* 기사 누르면 뜨는 타이틀*/
+        margin-bottom: 20px;
+        font-size: 25px;
+        text-align: left;
+        font-weight: bold;
+
+    }
+    .d-content{ /* 기사 누르면 뜨는 설몀*/
+        height: 350px;
+        overflow: auto;
+    }
+    .d-buttons{ /* 기사 누르면 뜨는 상세정보쪽 버튼들*/
+        display: flex;
+        position: absolute;
+        top:320px;
+        left:600px; 
+        margin: 100px 0; 
+    }
+
+    .d-button{
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        width: 450px;
+        color: #ffffff;
+        background-color: #000000;
+        margin-right: 10px;
+    }
+    .d-button:hover{ /* 기사 누르면, 상세버튼 색상 변경*/
+        background-color: #999999;
+        color: white;
+    }
+
+    .d-like{ /* 기사 누르면, 좋아요 버튼*/
+        width: 50px;
+        height: 50px;   
+        border: none;
+        background: none; 
+        background-image: url("../css/images/unlike.png") ;
+        background-size: cover;
+    }
+    .d-unlike{ /* 기사 누르면, 좋아요 해지 버튼*/
+        width: 50px;
+        height: 50px;   
+        border: none;
+        background: none; 
+        background-image: url("../css/images/like.png") ;
+        background-size: cover;
+        transition: 10s;
+    }
+
+/*------------footer------------------*/
+.footer-container{
+    text-align: center;
+    background: rgb(11, 71, 11);
+    
+}

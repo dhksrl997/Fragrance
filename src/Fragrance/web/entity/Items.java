@@ -12,11 +12,10 @@ public class Items {
 	private String sex;
 	private int maleLike;
 	private int femaleLike;
-	private String content;
 	
 
 	public Items(int itemNums, String img, String name, String brand, int size, String sort, String price, String scent,
-			String sex, int maleLike, int femaleLike, String content) {
+			String sex, int maleLike, int femaleLike) {
 		super();
 		this.itemNums = itemNums;
 		this.img = img;
@@ -29,7 +28,6 @@ public class Items {
 		this.sex = sex;
 		this.maleLike = maleLike;
 		this.femaleLike = femaleLike;
-		this.content = content;
 	}
 
 	public String getSex() {
@@ -128,13 +126,5 @@ public class Items {
 		this.femaleLike = femaleLike;
 	}
 
-	public String getContent() {
-		return content;
-	}
-
-	public void setContent(String content) {
-		this.content = content;
-	}
-	
 	
 }
