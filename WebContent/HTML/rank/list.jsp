@@ -1,14 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="../../../css/reset.css" type="text/css" rel="stylesheet">
-<link href="../../../css/rank/rankliststyle.css" type="text/css"
+<link href="../../css/reset.css" type="text/css" rel="stylesheet">
+<link href="../../css/rank/rankliststyle.css" type="text/css"
 	rel="stylesheet">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
@@ -29,6 +30,7 @@ body {
 	background-color: #f8f8f8;
 }
 </style>
+
 </head>
 
 <body>
@@ -89,33 +91,29 @@ body {
 					<section class="sub-menu">
 						<h1 class="d-none">서브메뉴</h1>
 						<ul>
-							<li><a name="category" class="hide show"
-								href="../rank/list.html">Men</a></li>
-							<li><a name="category" class="hide show"
-								href="../rank/list.html">Women</a></li>
-							<li><a name="category" class="hide show"
-								href="../rank/list.html">UNISEX</a></li>
-							<li><a name="category" class="hide show"
-								href="../rank/list.html">Solid</a></li>
-							<li><a name="category" class="hide show"
-								href="../rank/list.html">Rollerballs</a></li>
+							<li><a href="list?c=m">Men</a></li>
+							<li><a href="list?c=w">Women</a></li>
+							<li><a href="list?c=u">UNISEX</a></li>
+							<li><a href="list?c=s">Solid</a></li>
+							<li><a href="list?c=r">Rollerballs</a></li>
 						</ul>
 					</section>
 
 				</section>
 				<section class="banner">
 					<div class="banner-slide">
-						<img src="../../images/banner2.png" width="1240" height="500">
+						<img src="../../images/banner2.png" width="1240px" height="500px">
 					</div>
 					<div class="banner-slide">
-						<img src="../../images/dior.png" width="1240" height="500">
+						<img src="../../images/dior.png" width="1240px" height="500px">
 					</div>
 					<div class="banner-slide">
-						<img src="../../images/Lancome-Miracle.png" width="1240"
-							height="500">
+						<img src="../../images/Lancome-Miracle.png" width="1240px"
+							height="500px">
 					</div>
 					<div class="banner-slide">
-						<img src="../../images/banner.jpg" width="1240" height="500">
+						<img src="../../images/Dior-JenniferLarwens.jpg" width="1240px"
+							height="500px">
 					</div>
 
 				</section>
@@ -136,20 +134,23 @@ body {
 							</tr>
 						</thead>
 						<tbody>
-							<c:forEach items="list" varStatus="list">
+							<c:forEach var="list" items="${list }">
 								<tr>
-									<td>1</td>
-									<td class="table-img"></td>
-									<td>불가리 블루 뿌르 옴므 오드뚜왈렛</td>
-									<td>불가리</td>
-									<td>100</td>
-									<td>머스크</td>
-									<td>43000</td>
-									<td>1818</td>
+									<td>
+										<%
+											int i = 1;
+										%><%=i++%></td>
+									<td class="table-img"><img width="160px" height="140px"
+										src="../../images/${list.img }"></td>
+									<td>${list.name }</td>
+									<td>${list.brand }</td>
+									<td>${list.size }</td>
+									<td>${list.scent }</td>
+									<td>${list.price }</td>
+									<td>${list.maleLike+list.femaleLike}</td>
 								</tr>
 							</c:forEach>
 						</tbody>
-
 					</table>
 
 					<div class="pager">
@@ -166,8 +167,8 @@ body {
 		</div>
 	</section>
 </body>
-<script src="../../../script/rank/index.js"></script>
-<script src="../../../script/rank/list.js"></script>
+<script src="list.js"></script>
+<script src="menuaction.js"></script>
 
 
 </html>

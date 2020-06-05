@@ -67,11 +67,11 @@
 					<section class="sub-menu">
 						<h1 class="d-none">서브메뉴</h1>
 						<ul>
-							<li><a href="">Men</a></li>
-							<li><a href="">Women</a></li>
-							<li><a href="">UNISEX</a></li>
-							<li><a href="">Solid</a></li>
-							<li><a href="">Rollerballs</a></li>
+							<li><a href="list?c=m">Men</a></li>
+							<li><a href="list?c=w">Women</a></li>
+							<li><a href="list?c=u">UNISEX</a></li>
+							<li><a href="list?c=s">Solid</a></li>
+							<li><a href="list?c=r">Rollerballs</a></li>
 						</ul>
 					</section>
 

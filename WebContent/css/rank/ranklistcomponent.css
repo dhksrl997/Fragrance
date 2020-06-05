@@ -216,7 +216,7 @@
 }
 
 .list-table {
-    --table-layout: fixed;
+    /*  table-layout: fixed;*/
     width: 85%;
     border: #000 solid 1px;
     --border-radius: 50px;
@@ -227,11 +227,10 @@
     border-bottom: #808080 solid 3px;
 }
 
-.table-img {
+.table-img img {
     width: 160px;
     height: 140px;
     /* background-color: #9b0074; */
-    background: url(../../images/Hera-Exceptional.png);
     background-size: cover;
 
 }

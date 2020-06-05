@@ -1,4 +1,4 @@
-package Fragrance.web.Rank.controller;
+package com.fragrance.web.controller.rank;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -11,11 +11,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import Fragrance.web.entity.Items;
-import Fragrance.web.services.RankServices;
+import com.fragrance.web.entities.Items;
+import com.fragrance.web.serivces.rank.RankServices;
 
 @WebServlet("/HTML/rank/rankIndex")
-public class RankListIndex extends HttpServlet {
+public class IndexCtrl extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -26,9 +26,9 @@ public class RankListIndex extends HttpServlet {
 		List<Items> list = null;
 		ArrayList<List<Items>> items = new ArrayList<List<Items>>();
 		try {
-			manslist = service.getMansItemList();
-			womanlist = service.getWomanItemList();
-			list = service.getItemList();
+			manslist = service.getManLikeList();
+			womanlist = service.getWomanLikeList();
+			list = service.getUnisexLikeList();
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
