@@ -1,32 +1,82 @@
 #header{
-    height: 130px;
-    --background: red;
-}
-
-.header-menu>div {
-    display: flex;
-    justify-content: center;
+    height: 120px;
+    /* background: red; */
 }
 
 /*-----------------로고----------------*/
 
+.logo{
+    
+}
 
 
 /*--------------------검색창--------------------*/
 .search{
-    --background: orange;
+    /* background: orange; */
     height: 40px;
 }
 
 
 /*----------로그인-------------*/
 .member-menu{
-    --background: skyblue;
+    /* background: skyblue; */
     height: 40px;
 }
 
-/*-------------------------------------지욱(survey)main start-------------------------- */
-/*-------------설문전체크기-------------*/
+
+#body{
+    height:auto;
+    
+   /* background: rgb(0, 30, 128); */
+}
+.main{
+    height:max-content;
+    width: 1240px; 
+}
+.sub-menu{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    
+    height: 30px;
+    width: 1240px;
+    /* background: blue; */
+    /* margin-left: 130px; */
+    /*margin-left: 350px;*/
+}
+/*-----媛����댁� 1�� ���� ------------------------*/
+.best-item{
+    
+    
+}
+.best-item>div{
+    height: auto;
+    width: 1240px;
+    display: flex;
+    justify-content: center;
+    
+}
+.best-item>div>div{
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+/*----------�⑤�� 1�� ���� ������-----------------*/
+
+.ad-video{
+    margin-top: 50px;
+    height: 470px;
+    width: 1240px;
+}
+
+/*--------異�泥� ���댄��---------------------------*/
+.recomm{
+    width: 1240px;
+    margin-top: 30px;
+}
+
+
+/*-------------------------------------吏��슧(survey)main start-------------------------- */
+/*-------------�꽕臾몄쟾泥댄겕湲�-------------*/
 .matching-perfume{
     height: 1000px;
     width: 1240px;
@@ -34,7 +84,7 @@
     background: whitesmoke;
 }
 
-/*-------------설문 제목,부제목-------------*/
+/*-------------�꽕臾� �젣紐�,遺��젣紐�-------------*/
 
 .matching-perfume .matching-perfume-head{
 display: flex;
@@ -48,13 +98,13 @@ margin-top: 60px;
     .matching-perfume .matching-perfume-head h1{
         padding-top: 80px;
         padding-bottom: 40px;
-        font-family: '맑음';
+        font-family: '留묒쓬';
         font-size: 40px;
         font-weight: 200;
     }
 
     .matching-perfume .matching-perfume-head div{
-        font-family: '맑음';
+        font-family: '留묒쓬';
         font-size: 26px;
         font-weight: 500;
     }
@@ -74,20 +124,20 @@ margin-top: 60px;
     }
 
 
-    .matching-perfume-head .survey-page2 li:nth-child(2){
+    .matching-perfume-head .page li:nth-child(2){
         background: black;
     }
     
-    .matching-perfume-head .survey-page3 li:nth-child(3){
+    .matching-perfume-head .page2 li:nth-child(3){
         background: black;
     }
 
-    .matching-perfume-head .survey-page4 li:nth-child(4){
+    .matching-perfume-head .page3 li:nth-child(4){
         background: black;
     }
     
 
-/*-------------설문리스트 전체 조정-------------*/
+/*-------------�꽕臾몃━�뒪�듃 �쟾泥� 議곗젙-------------*/
 .matching-perfume-list{
     display: flex;
     flex-direction: column;
@@ -112,7 +162,7 @@ margin-top: 60px;
     padding: 60px 0;
 }
 
-    .matching-perfume-list ul a{
+    .matching-perfume-list ul li{
         display: flex;
         width: 200px;
         height: 200px;
@@ -125,32 +175,32 @@ margin-top: 60px;
         border-radius:150px;
       }
 
-/* 설문 목록 조정 */
-      .matching-perfume-list ul a{
+/* �꽕臾� 紐⑸줉 議곗젙 */
+      .matching-perfume-list ul li{
         margin:15px;
         overflow: hidden;
       }
 
-         /* ---------------나이 --------------------*/
-            .matching-perfume-list .age a:nth-child(1):hover{
+         /* ---------------�굹�씠 --------------------*/
+            .matching-perfume-list .age li:nth-child(1):hover{
                 background: url("../../images/age/10-1.png") no-repeat center;
                 background-size: 250px;
                 text-indent: 9999px;
             }
 
-            .matching-perfume-list .age a:nth-child(2):hover{
+            .matching-perfume-list .age li:nth-child(2):hover{
                 background: url("../../images/age/20.jpg") no-repeat;
                 background-size: 300px;
                 text-indent: 9999px;
             }
 
-            .matching-perfume-list .age a:nth-child(3):hover{
+            .matching-perfume-list .age li:nth-child(3):hover{
                 background: url("../../images/age/30.jpg") no-repeat center;
                 background-size: 300px;
                 text-indent: 9999px;
             }
 
-            .matching-perfume-list .age a:nth-child(4):hover{
+            .matching-perfume-list .age li:nth-child(4):hover{
                 background: url("../../images/age/40.jpg") no-repeat center;
                 background-size: 300px;
                 text-indent: 9999px;
@@ -158,65 +208,65 @@ margin-top: 60px;
 
 
    
-            /* ---------------계절 --------------------*/
-            .matching-perfume-list .season a:nth-child(1):hover{
+            /* ---------------怨꾩젅 --------------------*/
+            .matching-perfume-list .season li:nth-child(1):hover{
                 background: url("../../images/season/spring1.jpg");
                 text-indent: 9999px;
             }
 
-            .matching-perfume-list .season a:nth-child(2):hover{
+            .matching-perfume-list .season li:nth-child(2):hover{
                 background: url("../../images/season/summer.jpg");
                 text-indent: 9999px;
 
             }
 
-            .matching-perfume-list .season a:nth-child(3):hover{
+            .matching-perfume-list .season li:nth-child(3):hover{
                 background: url("../../images/season/autumn.jpg");
                 text-indent: 9999px;
             }
 
-            .matching-perfume-list .season a:nth-child(4):hover{
+            .matching-perfume-list .season li:nth-child(4):hover{
                 background: url("../../images/season/winter.jpg");
                 text-indent: 9999px;
             }
-        /*--------------------- 향 -----------------------*/
-            .matching-perfume-list .scent a:nth-child(1):hover{
+        /*--------------------- �뼢 -----------------------*/
+            .matching-perfume-list .scent li:nth-child(1):hover{
                 background: url("../../images/scent/floral.png");
                 background-size: 210px;
                 text-indent: 9999px;
                 }
 
-            .matching-perfume-list .scent a:nth-child(2):hover{
+            .matching-perfume-list .scent li:nth-child(2):hover{
                 background: url("../../images/scent/citrus.png");
                 background-size: 210px;
                 text-indent: 9999px;
                 }
 
-            .matching-perfume-list .scent a:nth-child(3):hover{
+            .matching-perfume-list .scent li:nth-child(3):hover{
                 background: url("../../images/scent/aqua.png");
                 background-size: 210px;
                 text-indent: 9999px;
                 }
                 
-            .matching-perfume-list .scent a:nth-child(4):hover{
+            .matching-perfume-list .scent li:nth-child(4):hover{
                 background: url("../../images/scent/woody.png");
                 background-size: 210px;
                 text-indent: 9999px;
             }
 
-            .matching-perfume-list .scent a:nth-child(5):hover{
+            .matching-perfume-list .scent li:nth-child(5):hover{
                 background: url("../../images/scent/powdery.png");
                 background-size: 210px;
                 text-indent: 9999px;
             }
 
-            .matching-perfume-list .scent a:nth-child(6):hover{
+            .matching-perfume-list .scent li:nth-child(6):hover{
                 background: url("../../images/scent/musk.jpg");
                 background-size: 210px;
                 text-indent: 9999px;
             }
 
-    /*이전 / 다음 버튼*/
+    /*�씠�쟾 / �떎�쓬 踰꾪듉*/
 
     .matching-perfume-list div{
         display: flex;
@@ -264,11 +314,11 @@ margin-top: 60px;
                 color:white;
             }
 
-/* ------------------------------지욱(survey)main end----------------------------- */
-/*-------------풋터-------------*/
+/* ------------------------------吏��슧(survey)main end----------------------------- */
+/*--------footer---------------------------*/
 #footer{
     height: 30px;
-    --margin-top: 100px;
+    margin-top: 10px;
 }
 .footer-container{
     height: 100%;

@@ -18,8 +18,6 @@
    }
    
 
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ recomm start ㅡㅡㅡㅡ */
-
 #body .recomm-main {
    width: 1240px;
    min-height: 1400px;
@@ -87,9 +85,10 @@
 
 
 .recomm-main .fragrances-recomm {
-   width: 100%;
+   width: 100%;    
    margin-top: 200px;
    padding-bottom: 40px;
+   position: relative;
 }
 
    .fragrances-recomm h1 {
@@ -130,96 +129,100 @@
          text-decoration: none;
       }
 
-.recomm-tag-prdlist {
-   width: 1240px;
-   height: 420px;
-   margin-top: 100px;
-   position: relative;
-   display: flex;
-   justify-content: center;
-   font-family: "Noto Sans KR", Arial, sans-serif;
-   font-weight: lighter;
-   font-size: 60px;
-   overflow: hidden;
+   .recomm-prdlist-bnt{
+      display: flex;
+      justify-content: space-between;
+      position : absolute;
+      top:150px;
 
-}
-
-   .recomm-tag-prdlist .moveBtn-pre {
-      width: 64px;
-      height: 94px;
-      align-items: center;
-      position: absolute;
-      --background: #eee;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      mix-blend-mode: multiply;
-      --opacity: 0.7;
    }
+      .recomm-prdlist-bnt .moveBtn-pre {
+         width: 64px;
+         height: 94px;
+         align-items: center;
+         position: absolute;
+         left: -15px;
+         /* 
+         position: absolute;
+         transform: translateY(-50%);
+         mix-blend-mode: multiply; */
+      }
 
-   .recomm-tag-prdlist .moveBtn-next {
-      width: 64px;
-      height: 94px;
-      align-items: center;
-      position: absolute;
-      --background: #eee;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      mix-blend-mode: multiply;
-      --opacity: 0.7;
-   }
+      .recomm-prdlist-bnt .moveBtn-next {
+         width: 64px;
+         height: 94px;
+         align-items: center;
+         position: absolute;
+         left: 1192px;
+         /* 
+         position: absolute;
+         transform: translateY(-50%);
+         mix-blend-mode: multiply; */
+      }
 
 
+
+/* -------------- �젣�뭹 紐⑸줉 --------------- */
 .prdinfo-wrap {
-   width: 1240px;
-   height: 10px;
+   width: 1160px;
+  overflow: hidden;
    display: flex;
-   justify-content: center;
+   font-family: "留묒�怨좊뵓", Arial, sans-serif;
+   font-weight: lighter;
    text-align: center;
-   position: absolute;
-   top:0px;
-   left: 1160px;
-   transition: 1s;
+   margin-left: auto;
+   margin-right: auto;
+   
+
 }
 
-   .prdinfo-wrap>a {
-      text-decoration: none;
-      color: #000;
-      width: 310px;
-      height: 420px;
-      margin-top: 0;
-   }
+.prdinfo-wrap .carousel{
+	display: flex;
+	font-family: "留묒�怨좊뵓", Arial, sans-serif;
+   font-weight: lighter;
+   text-align: center;
+	transition:1s;
+	
+}
 
-   .prdinfo-wrap .prdinfo-wrap-img {
-      display: inline-block;
-      width: 290px;
-      height: 350px;
-   }
 
-   .prdinfo-wrap .prdinfo-wrap-text {
-      align-items: center;
-      height: 50px;
-      text-align: center;
-      font-size: 12px;
-   }
-
-      .prdinfo-wrap-text>span {
-         font-size: 18px;
+      .recomm-prd a{
+         text-decoration: none;
+         color: rgb(0, 0, 0);
+      }
+      .recomm-prd img{
+         width:290px;
+         height:300px;
+      }
+	
+      .recomm-prd .pName{
+         line-height: 100px;
+         font-size: 16px;
          font-weight: 400;
          letter-spacing: -1.2px;
          text-decoration: none;
-         padding: 20px 0;
+         padding: 20px 0 6px 0;
+         display:inline-block;
+         white-space : nowrap;
+         width: 280px;
+         text-overflow: ellipsis;
+         overflow:hidden;
       }
 
-      .prdinfo-wrap-text>p {
-         margin-top: 10px;
+      .pBrand{
+         font-size: 14px;
          text-decoration: none;
+         margin-top: -30px;
       }
 
 
+      .prd-display{
+         position: relative;
+         width: 1240px;
+         height: 600px;
+      }
+      
+   
 
 
-
-
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ recomm end ㅡㅡㅡㅡ */
+/* �뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫�뀫 recomm end �뀫�뀫�뀫�뀫 */

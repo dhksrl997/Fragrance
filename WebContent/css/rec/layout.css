@@ -1,11 +1,6 @@
 #header{
-    height: 130px;
-    --background: red;
-}
-
-.header-menu>div {
-    display: flex;
-    justify-content: center;
+    height: 120px;
+    /* background: red; */
 }
 
 /*-----------------로고----------------*/
@@ -17,84 +12,72 @@
 
 /*--------------------검색창--------------------*/
 .search{
-    --background: orange;
+    /* background: orange; */
     height: 40px;
 }
 
 
 /*----------로그인-------------*/
 .member-menu{
-    --background: skyblue;
+    /* background: skyblue; */
     height: 40px;
 }
 
 
 
 /*-----------------배너----------------------------------*/
-#banner{
-    margin-top: 10px;
-    height: 366px;
-    background: url("../CSS/images/banner2.png") no-repeat center yellow;;
-     
-}
-    #banner .content-container{
-        width: 960px;
-        height: 100%;
-    /* background: #313131 url("../../HTML/customer/notice/images/hybrid_main.png") no-repeat center;  */
-        margin-left:auto;
-        margin-right:auto;
-    }
+
 
 #body{
     height:auto;
-    --background: silver;
+    
+   /* background: rgb(0, 30, 128); */
 }
 .main{
     height:max-content;
     width: 1240px; 
 }
 .sub-menu{
-    margin-top: 10px;
-    padding-top: 20px;
-    height: 100px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    
+    height: 30px;
     width: 1240px;
+    /* background: blue; */
     /* margin-left: 130px; */
     /*margin-left: 350px;*/
 }
-
+/*-----媛����댁� 1�� ���� ------------------------*/
 .best-item{
-    margin-top: 30px;
-    height: 330px;
+    
+    
+}
+.best-item>div{
+    height: auto;
     width: 1240px;
-    background: orchid;
     display: flex;
     justify-content: center;
-
+    
 }
-.best-item h2{
-    padding-top: 10px;
-    text-align: center;
-    padding-left: 150px;
-    padding-right: 150px;
-    background: blanchedalmond;
+.best-item>div>div{
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
-
+/*----------�⑤�� 1�� ���� ������-----------------*/
 
 .ad-video{
-    margin-top: 30px;
-    height: 400px;
+    margin-top: 50px;
+    height: 470px;
     width: 1240px;
-    background: powderblue;
 }
 
+/*--------異�泥� ���댄��---------------------------*/
 .recomm{
-    margin-top: 30px;
-    height: 400px;
     width: 1240px;
-    background: salmon;
+    margin-top: 30px;
 }
-
+/*--------footer---------------------------*/
 #footer{
     height: 30px;
     margin-top: 10px;

@@ -217,7 +217,7 @@
 
 .list-table {
     /*  table-layout: fixed;*/
-    width: 85%;
+    width: 100%;
     border: #000 solid 1px;
     --border-radius: 50px;
     margin-left: auto;
@@ -228,8 +228,10 @@
 }
 
 .table-img img {
-    width: 160px;
-    height: 140px;
+    width: 140px;
+    height: 160px;
+    padding-top:10px;
+    padding-bottom:10px;
     /* background-color: #9b0074; */
     background-size: cover;
 
@@ -248,13 +250,16 @@
 .list-table>thead td {
     --border: 2px solid blue;
     --border-radius: 50px;
-
+    min-width:60px;
     border-top: #808080 solid 3px;
     opacity: 0.7;
 }
 
 .list-table>tbody td {
+	padding-left:10px;
+	padding-right:10px;
     border-bottom: #808080 solid 2px;
+    min-width:80px;
     --border-radius: 50px;
 }
 

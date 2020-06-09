@@ -11,6 +11,7 @@
 <link href="../../css/reset.css" type="text/css" rel="stylesheet">
 <link href="../../css/rank/rankliststyle.css" type="text/css"
 	rel="stylesheet">
+	
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
 <title>RankList</title>
@@ -27,7 +28,7 @@
 
 body {
 	font-family: 'Lato', sans-serif;
-	background-color: #f8f8f8;
+	--background-color: black;
 }
 </style>
 
@@ -127,28 +128,27 @@ body {
 								<td>이미지</td>
 								<td>제품명</td>
 								<td>브랜드</td>
-								<td>용량</td>
+								<td>용량(ml/g)</td>
 								<td>향</td>
 								<td>가격</td>
-								<td>좋아요수</td>
+								<td>좋아요</td>
 							</tr>
 						</thead>
 						<tbody>
 							<c:forEach var="list" items="${list }">
-								<tr>
-									<td>
-										<%
-											int i = 1;
-										%><%=i++%></td>
-									<td class="table-img"><img width="160px" height="140px"
-										src="../../images/${list.img }"></td>
-									<td>${list.name }</td>
-									<td>${list.brand }</td>
-									<td>${list.size }</td>
-									<td>${list.scent }</td>
-									<td>${list.price }</td>
-									<td>${list.maleLike+list.femaleLike}</td>
-								</tr>
+								<c:set var="i" value="${i+1 }"/>
+									<tr>
+										<td>${i }</td>
+										<td class="table-img"><img width="160px" height="140px"
+											src="../../images/${list.img }"></td>
+										<td><a href="detail?id=${list.itemnums}">${list.name }</a></td>
+										<td>${list.brand }</td>
+										<td>${list.size }</td>
+										<td>${list.scent }</td>
+										<fmt:formatNumber type="number" maxFractionDigits="3" value="${list.price }" var="price"/>
+										<td>${price }</td>
+										<td>${list.maleLike+list.femaleLike}</td>
+									</tr>
 							</c:forEach>
 						</tbody>
 					</table>

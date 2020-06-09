@@ -11,8 +11,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.fragrance.web.entities.Items;
-import com.fragrance.web.serivces.rank.RankServices;
+import org.apache.tiles.TilesContainer;
+import org.apache.tiles.access.TilesAccess;
+
+import com.fragrance.web.entity.Items;
+import com.fragrance.web.service.RankServices;
 
 @WebServlet("/HTML/rank/rankIndex")
 public class IndexCtrl extends HttpServlet {
@@ -25,6 +28,7 @@ public class IndexCtrl extends HttpServlet {
 		List<Items> womanlist = null;
 		List<Items> list = null;
 		ArrayList<List<Items>> items = new ArrayList<List<Items>>();
+		
 		try {
 			manslist = service.getManLikeList();
 			womanlist = service.getWomanLikeList();
@@ -41,6 +45,9 @@ public class IndexCtrl extends HttpServlet {
 		items.add(list);
 
 		request.setAttribute("items", items);
-		request.getRequestDispatcher("/HTML/rank/rankIndex.jsp").forward(request, response);
+//		request.getRequestDispatcher("/HTML/rank/rankIndex.jsp").forward(request, response);
+		TilesContainer container = TilesAccess.getContainer(
+		        request.getSession().getServletContext());
+		container.render("rank.rankIndex", request, response);
 	}
 }

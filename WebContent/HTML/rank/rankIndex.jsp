@@ -21,13 +21,14 @@
 
 			<nav class="search">
 				<h1 class="d-none">검색폼</h1>
-				<form>
+				<form action="search">
 					<fieldset>
 						<div>
 							<legend class="d-none">검색폼</legend>
 
-							<input type="text" name="query"> <i class="fas fa-search"
-								style="z-index: 999px;"> <input type="submit" value="검색"></i>
+							<input type="text" name="query"> 
+							<i class="fas fa-search" style="z-index: 999px;"> 
+							<input type="submit" value="검색"></i>
 						</div>
 					</fieldset>
 				</form>
@@ -84,7 +85,7 @@
 									<c:forEach var="i2" items="${i}" begin="0" end="2">
 										<li>
 											<div>
-												<img src="../../images/${i2.img }">
+											<a href="detail?id=${i2.itemnums }">	<img src="../../images/${i2.img }"></a>
 											</div>
 											<div>${i2.brand }</div>
 											<div>${i2.name }</div>

@@ -10,8 +10,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.fragrance.web.entities.Items;
-import com.fragrance.web.serivces.rank.RankServices;
+import org.apache.tiles.TilesContainer;
+import org.apache.tiles.access.TilesAccess;
+
+import com.fragrance.web.entity.Items;
+import com.fragrance.web.service.RankServices;
 
 @WebServlet("/HTML/rank/list")
 //@WebServlet(urlPatterns = {
@@ -28,6 +31,7 @@ public class getList extends HttpServlet {
 		RankServices service = new RankServices();
 		List<Items> list = null;
 		String get = request.getParameter("c");
+		System.out.println(get);
 		try {
 			
 			if (get.equals("m"))
@@ -52,7 +56,9 @@ public class getList extends HttpServlet {
 			e.printStackTrace();
 		}
 		request.setAttribute("list", list);
-//		response.sendRedirect("list?c="+get);
-		request.getRequestDispatcher("/HTML/rank/list.jsp").forward(request, response);
+//		request.getRequestDispatcher("/HTML/rank/list.jsp").forward(request, response);
+		TilesContainer container = TilesAccess.getContainer(
+		        request.getSession().getServletContext());
+		container.render("rank.list", request, response);
 	}
 }

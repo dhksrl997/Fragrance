@@ -3,9 +3,9 @@
     --background: red;
 }
 
-.header-menu>div {
+.header-menu {
     display: flex;
-    justify-content: center;
+    
 }
 
 /*-----------------로고----------------*/
