@@ -25,7 +25,7 @@
 									<c:forEach var="i2" items="${i}" begin="0" end="2">
 										<li>
 											<div>
-											<a href="detail?id=${i2.itemnums }">	<img src="../../images/${i2.img }"></a>
+											<a href="detail?id=${i2.itemnums }"><img src="../../images/${i2.img }"></a>
 											</div>
 											<div>${i2.brand }</div>
 											<div>${i2.name }</div>

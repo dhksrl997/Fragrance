@@ -51,7 +51,7 @@ public class RecommentService {
 		String tag2 = "%"+season+"%";
 		String tag3 = "%"+scent+"%";
 		
-		String sql = "SELECT * FROM (SELECT Items.* FROM Items where gender = ? or gender = '°ø¿ë') t where (t.tag like ? and t.tag like ? and t.tag like ?) limit 3";
+		String sql = "SELECT * FROM (SELECT Items.* FROM Items where gender = ? or gender = 'ï¿½ï¿½ï¿½ï¿½') t where (t.tag like ? and t.tag like ? and t.tag like ?) limit 3";
 		String url = "jdbc:mysql://dev.notepubs.com:9898/fragrance?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, "fragrance", "0505");

@@ -55,9 +55,9 @@
 								<c:set var="i" value="${i+1 }"/>
 									<tr>
 										<td>${i }</td>
-										<td class="table-img"><img width="160px" height="140px"
-											src="../../images/${list.img }"></td>
-										<td><a href="detail?id=${list.itemnums}">${list.name }</a></td>
+										<td class="table-img"><a href="detail?id=${list.itemnums}" target="_blank">
+										<img width="160px" height="140px" src="../../images/${list.img }"></a></td>
+										<td><a href="detail?id=${list.itemnums}" target="_blank">${list.name }</a></td>
 										<td>${list.brand }</td>
 										<td>${list.size }</td>
 										<td>${list.scent }</td>

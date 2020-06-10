@@ -16,7 +16,7 @@ import org.apache.tiles.access.TilesAccess;
 import com.fragrance.web.entity.Items;
 import com.fragrance.web.service.RecommentService;
 
-//´Ù¸¥ ÂÊ¿¡¼­ list ÄÁÆ®·Ñ·¯¸¦ ¸¸µé¸é ÄÚµå¸¸ ´ëÃ¼ÇÏ°í ¾Ö³ëÅ×ÀÌ¼ÇÀ¸·Î ¸ÊÇÎÇØÁÖ¸éµÈ´Ù.
+//ï¿½Ù¸ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ list ï¿½ï¿½Æ®ï¿½Ñ·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Úµå¸¸ ï¿½ï¿½Ã¼ï¿½Ï°ï¿½ ï¿½Ö³ï¿½ï¿½ï¿½ï¿½Ì¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½È´ï¿½.
 @WebServlet("/HTML/rec/recomm")
 public class RecommentController extends HttpServlet{
 	
