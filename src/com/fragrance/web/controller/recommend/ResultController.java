@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.tiles.TilesContainer;
 import org.apache.tiles.access.TilesAccess;
 
-import com.fragrance.web.entity.Result;
+import com.fragrance.web.entity.Items;
 import com.fragrance.web.service.RecommentService;
 
 //�ٸ� �ʿ��� list ��Ʈ�ѷ��� ����� �ڵ常 ��ü�ϰ� �ֳ����̼����� �������ָ�ȴ�.
@@ -25,7 +25,7 @@ public class ResultController extends HttpServlet{
 		response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
 		RecommentService service = new RecommentService();
-		List<Result> list = null;
+		List<Items> list = null;
 		String gender =request.getParameter("gender");
 		String age =request.getParameter("age");
 		String season =request.getParameter("season");

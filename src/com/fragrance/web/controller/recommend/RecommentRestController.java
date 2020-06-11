@@ -15,7 +15,7 @@ import com.fragrance.web.entity.Items;
 import com.fragrance.web.service.RecommentService;
 import com.google.gson.Gson;
 
-//ï¿½Ù¸ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ list ï¿½ï¿½Æ®ï¿½Ñ·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Úµå¸¸ ï¿½ï¿½Ã¼ï¿½Ï°ï¿½ ï¿½Ö³ï¿½ï¿½ï¿½ï¿½Ì¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½È´ï¿½.
+//´Ù¸¥ ÂÊ¿¡¼­ list ÄÁÆ®·Ñ·¯¸¦ ¸¸µé¸é ÄÚµå¸¸ ´ëÃ¼ÇÏ°í ¾Ö³ëÅ×ÀÌ¼ÇÀ¸·Î ¸ÊÇÎÇØÁÖ¸éµÈ´Ù.
 @WebServlet("/HTML/rec/recomm-data")
 public class RecommentRestController extends HttpServlet{
 	
@@ -36,8 +36,8 @@ public class RecommentRestController extends HttpServlet{
 		tag = "%" + request.getParameter("tag") + "%";
 		}
 		
-		System.out.println("ï¿½ï¿½Æ®ï¿½Ñ·ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½"+colum);
-		System.out.println("ï¿½ï¿½Æ®ï¿½Ñ·ï¿½ ï¿½Â±×¸ï¿½"+tag);
+		System.out.println("ÄÁÆ®·Ñ·¯ ÄÃ·³¸í"+colum);
+		System.out.println("ÄÁÆ®·Ñ·¯ ÅÂ±×¸í"+tag);
 		
 		try {
 			list = service.getRecommentList(colum,tag);

@@ -61,7 +61,7 @@
 				<div class="carousel">
 					<c:forEach var="n" items="${recommend}" varStatus="st">
 						<div class="recomm-prd">
-							<a href="prd-detail?id=${n.itemNums}"><img
+							<a href="/HTML/rank/detail?id=${n.itemnums}"><img
 								src="../../images/${n.img }"></a> <span class="pName">${n.name }</span>
 							<p class="pBrand">${n.brand }</p>
 						</div>

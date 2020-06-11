@@ -52,5 +52,17 @@ public class UserServices {
 		con.close();
 		return 0;
 	}
+	
+	public boolean isNumber(String str) {
+		boolean check = true;
+		for (int i = 0; i < str.length(); i++) {
+			if (!Character.isDigit(str.charAt(i)))
+			{
+				check = false;
+				break;
+			} // end if
+		} // end for
+		return check;
+	}
 
 }

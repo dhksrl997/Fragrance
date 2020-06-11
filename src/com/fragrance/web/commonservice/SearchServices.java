@@ -69,7 +69,8 @@ public class SearchServices {
 					rs.getString("content"),
 					rs.getInt("like"),
 					rs.getInt("hit"),
-					rs.getString("celeb"));
+					rs.getString("celeb"),
+					rs.getInt("itemNums"));
 
 			list.add(celeb);
 

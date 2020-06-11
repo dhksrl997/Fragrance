@@ -5,6 +5,8 @@ window.addEventListener("load", function(){
     const firstSlide = banner.querySelector(".banner-slide:first-child");
     const pager = document.querySelector(".pager ul");
     const pagerIndex = pager.querySelectorAll("a");
+    const body = document.querySelector("#body");
+    const list = body.querySelector(".list");
 
 
     // firstSlide.classList.add(SHOWING_CLASS);
@@ -26,22 +28,12 @@ window.addEventListener("load", function(){
 
     slide();
     setInterval(slide,3000);
-  
+    
+    function mouseWheel(e){
+        console.log(e);
+    };
+    
 
-
-    // pager.onclick = function(e){
-    //     e.preventDefault();
-    //     console.log(e.target);
-
-    //     if(e.target.nodeName != "A")
-    //     return;
-
-    //     for(var i=0; i<pagerIndex.length; i++){
-    //         pagerIndex[i].classList.add("orange");//
-    //     }
-    //     e.target.classList.add("orange");
-
-    // };
 
   
 

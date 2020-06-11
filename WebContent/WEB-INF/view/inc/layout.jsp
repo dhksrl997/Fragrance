@@ -12,6 +12,8 @@
 	<link href="../../css/reset.css" type="text/css" rel="stylesheet">
 	<link href="<tiles:getAsString name="css"/>" type="text/css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+	<script src="/js/menuAction.js"></script>
+	<script src="/js/Rank/list.js"></script>
 </head>
 	<!-- -----header menu------------------------------- -->
 

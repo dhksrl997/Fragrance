@@ -7,8 +7,7 @@
 
 			<section>
 				<h1 class="d-none">top-banner</h1>
-				<img class="top-banner"
-					src="../../images/celeb/YSL-LIBRE-banner.jpg">
+				<img class="top-banner" src="../../images/banner/YSL-LIBRE-banner.jpg">
 			</section>
 
 			<section class="grid-container1">
@@ -35,7 +34,7 @@
 			<section>
 				<h1 class="d-none">middle-banner</h1>
 				<img class="middle-banner"
-					src="../../images/celeb/ChanelBleude-banner.png">
+					src="../../images/banner/ChanelBleude-banner.png">
 			</section>
 			<!-- -------------middle banner----------------------------- -->
 

@@ -29,7 +29,8 @@
 #banner{
     margin: 30px auto 0;
     height: 400px;
-    background: url("../../images/banner-darks.jpg") no-repeat center;
+    background:red;
+    background: url("../../images/banner/banner-darks.jpg") no-repeat center;
     background-size:cover;
     /* width: 1240px; */
      
@@ -56,11 +57,8 @@
     
     height: 30px;
     width: 1240px;
-    /* background: blue; */
-    /* margin-left: 130px; */
-    /*margin-left: 350px;*/
 }
-/*-----媛����댁� 1�� ���� ------------------------*/
+/*-----best items ------------------------*/
 .best-item{
     
     

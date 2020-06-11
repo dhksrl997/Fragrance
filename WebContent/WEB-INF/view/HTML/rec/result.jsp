@@ -11,7 +11,7 @@
 				<h1 class="d-none">목록</h1>
 				<ul class="prdinfo-warp">
 					<c:forEach var="n" items="${result}" varStatus="st">
-						<li><a href="prd-detail.html">
+						<li><a href="/HTML/rank/detail?id=${n.itemnums}">
 								<div class="prdinfo-warp-img">
 									<img src="../../images/${n.img }">
 								</div>

@@ -176,7 +176,7 @@
 						<iframe id="main_fullvideo-id" frameborder="0" allowfullscreen="1"
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							title="YouTube video player" width="100%" height="100%"
-							src="https://www.youtube.com/embed/Ocjdar1yqW8?autoplay=0&rel=0&controls=0&disablekb=1&showinfo=0&start=1&enablejsapi=1&origin=https%3A%2F%2Fdiatv.cjenm.com&widgetid=1">
+							src="https://www.youtube.com/embed/Ocjdar1yqW8?autoplay=1&rel=0&controls=0&disablekb=1&showinfo=0&start=1&enablejsapi=1&origin=https%3A%2F%2Fdiatv.cjenm.com&widgetid=1">
 						</iframe>
 					</div>
 				</section>
@@ -186,7 +186,7 @@
 						<iframe id="main_fullvideo-id" frameborder="0" allowfullscreen="1"
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							title="YouTube video player" width="100%" height="100%"
-							src="https://www.youtube.com/embed/h4s0llOpKrU?autoplay=0&rel=0&controls=0&disablekb=1&showinfo=0&start=1&enablejsapi=1&origin=https%3A%2F%2Fdiatv.cjenm.com&widgetid=1">
+							src="https://www.youtube.com/embed/h4s0llOpKrU?autoplay=1&rel=0&controls=0&disablekb=1&showinfo=0&start=1&enablejsapi=1&origin=https%3A%2F%2Fdiatv.cjenm.com&widgetid=1">
 						</iframe>
 					</div>
 				</section>

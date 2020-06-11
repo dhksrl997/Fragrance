@@ -5,50 +5,40 @@
 body{
     --background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
 }
+#header a{
+	color:black;
+}
 
-
-/*-----------------로고----------------*/
+/*-----------------濡쒓퀬----------------*/
 
 .logo{
  margin-right: 50px;
 }
 
 
-/*--------------------검색창--------------------*/
+/*--------------------寃��깋李�--------------------*/
 .search{
 
     height: 40px;
 }
 
 
-/*----------로그인-------------*/
+/*----------濡쒓렇�씤-------------*/
 .member-menu{
     --background: skyblue;
     height: 40px;
 }
 
 
+/*-----------------諛곕꼫----------------------------------*/
 
-/*-----------------배너----------------------------------*/
-#banner{
-    margin-top: 100px;
-    height: 366px;
-    background: url("../CSS/images/banner2.png") no-repeat center yellow;
-     
-}
-    #banner .content-container{
-        width: 960px;
-        height: 100%;
-        margin-left:auto;
-        margin-right:auto;
-    }
 
 #body{
     min-height: 1400px;
    --background: rgb(0, 30, 128);
 }
 .main{
-    --width: 1240px; 
+    width: 1240px; 
     height:max-content;
 }
 .sub-menu{

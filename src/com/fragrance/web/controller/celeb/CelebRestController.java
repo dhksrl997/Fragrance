@@ -28,7 +28,6 @@ public class CelebRestController extends HttpServlet{
          String page_ = request.getParameter("p");
          if(page_!=null && !page_.equals(""))
              id = Integer.parseInt(page_);
-         System.out.println(page_);
          Celeb celeb = null;
       
          try {
@@ -49,7 +48,5 @@ public class CelebRestController extends HttpServlet{
          String json=  gson.toJson(celeb);
          PrintWriter out =  response.getWriter();
          out.write(json);
-         System.out.println(json);
-
    }
 }

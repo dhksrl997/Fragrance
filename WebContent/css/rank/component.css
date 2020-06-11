@@ -1,4 +1,4 @@
-/*---------로고 위치--------------*/
+/*---------濡쒓퀬 �쐞移�--------------*/
 .logo {
     --background: pink;
     height: 70px;
@@ -7,7 +7,7 @@
     margin-top: 15px;
 }
 
-/*--------헤더 위치------------*/
+/*--------�뿤�뜑 �쐞移�------------*/
 
 
 .header-menu {
@@ -27,15 +27,13 @@
     align-items: center;
 }
 .search input[type="submit"]{
-    border: 0px;
-    height:25px;
+   border: 0px;
+    height: 25px;
     width: 31px;
     text-indent: -9999px;
     position: absolute;
-    right: 20px;
     bottom: 12px;
-    background: rgba(0,0,0,0);
-   
+    background: rgba(0, 0, 0, 0);
 
   
 
@@ -53,7 +51,7 @@
 
 .member-menu>ul {
     display: flex;
-    font-family: "맑은 고딕", "고딕", Arial, Helvetica, sans-serif;
+    font-family: "留묒� 怨좊뵓", "怨좊뵓", Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 15px;
     color: #000;
@@ -72,17 +70,14 @@
     top: 0px;
     background-color: rgb(255, 255, 255, 0.8);
     z-index: 999;
-    margin-left: 60px;
-
+   
 }
 
-.main-menu{
-    border-bottom: 1px solid black;
-}
+
 .main-menu ul {
     display: flex;
     justify-content: center;
-    font-family: "맑은 고딕", "고딕", Arial, Helvetica, sans-serif;
+    font-family: "留묒� 怨좊뵓", "怨좊뵓", Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 50px;
     color: #000;
@@ -105,7 +100,7 @@
     color: brown;
 }
 
-/*------body (서브메뉴부터 footer전까지)-----*/
+/*------body (�꽌釉뚮찓�돱遺��꽣 footer�쟾源뚯�)-----*/
 #body {
     display: flex;
     justify-content: center;
@@ -117,7 +112,7 @@
 .sub-menu>ul {
     display: flex;
     justify-content: center;
-    font-family: "맑은 고딕", "고딕", Arial, Helvetica, sans-serif;
+    font-family: "留묒� 怨좊뵓", "怨좊뵓", Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 40px;
 }
@@ -159,6 +154,12 @@
 .rank-category ul{
     display: flex;
 }
+.rank-category ul li{
+	width:
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+}
 .rank-category li>div:first-child{
     display:inline;
     
@@ -175,6 +176,7 @@
 .rank-category li div img{
 	width:300px;
 	height:300px;
+	margin-right:10px;
 }
 .rank-category li{
     --align-content: center;
@@ -187,7 +189,12 @@
     margin-right:auto;
     justify-content:center;
 }
-
+.rank-category a{
+	color:black;
+}
+.rank-category a:hover{
+	text-decoration:none;
+}
 .on{
     position: fixed;
     left: 1800px;

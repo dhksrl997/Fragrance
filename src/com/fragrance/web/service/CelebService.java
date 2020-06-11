@@ -36,7 +36,8 @@ public class CelebService {
 					rs.getString("content"),
 					rs.getInt("like"),
 					rs.getInt("hit"),
-					rs.getString("celeb"));
+					rs.getString("celeb"),
+					rs.getInt("itemNums"));
 			list.add(celeb);
 		}
 		rs.close();
@@ -74,7 +75,8 @@ public class CelebService {
 					rs.getString("content"),
 					rs.getInt("like"),
 					rs.getInt("hit"),
-					rs.getString("celeb"));
+					rs.getString("celeb"),
+					rs.getInt("itemNums"));
 		}
 		rs.close();
 		st.close();

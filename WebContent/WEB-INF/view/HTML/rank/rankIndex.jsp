@@ -8,11 +8,11 @@
 					<section class="sub-menu">
 						<h1 class="d-none">서브메뉴</h1>
 						<ul>
-							<li><a href="list?c=m">Men</a></li>
-							<li><a href="list?c=w">Women</a></li>
-							<li><a href="list?c=u">UNISEX</a></li>
-							<li><a href="list?c=s">Solid</a></li>
-							<li><a href="list?c=r">Rollerballs</a></li>
+							<li><a href="list?c=m&p=1" class="hide show">Men</a></li>
+							<li><a href="list?c=w&p=1" class="hide show">Women</a></li>
+							<li><a href="list?c=u&p=1" class="hide show">UNISEX</a></li>
+							<li><a href="list?c=s&p=1" class="hide show">Solid</a></li>
+							<li><a href="list?c=r&p=1" class="hide show">Rollerballs</a></li>
 						</ul>
 					</section>
 
@@ -27,8 +27,8 @@
 											<div>
 											<a href="detail?id=${i2.itemnums }"><img src="../../images/${i2.img }"></a>
 											</div>
-											<div>${i2.brand }</div>
-											<div>${i2.name }</div>
+											<div><a href="detail?id=${i2.itemnums }">${i2.brand }</a></div>
+											<div><a href="detail?id=${i2.itemnums }">${i2.name }</a></div>
 										</li>
 									</c:forEach>
 								</c:forEach>
@@ -41,10 +41,10 @@
 									<c:forEach var="i2" items="${i}" begin="0" end="2">
 										<li>
 											<div>
-												<img src="../../images/${i2.img }">
+												<a href="detail?id=${i2.itemnums }"><img src="../../images/${i2.img }"></a>
 											</div>
-											<div>${i2.brand }</div>
-											<div>${i2.name }</div>
+											<div><a href="detail?id=${i2.itemnums }">${i2.brand }</a></div>
+											<div><a href="detail?id=${i2.itemnums }">${i2.name }</a></div>
 										</li>
 									</c:forEach>
 								</c:forEach>
@@ -57,10 +57,42 @@
 									<c:forEach var="i2" items="${i}" begin="0" end="2">
 										<li>
 											<div>
-												<img src="../../images/${i2.img }">
+												<a href="detail?id=${i2.itemnums }"><img src="../../images/${i2.img }"></a>
 											</div>
-											<div>${i2.brand }</div>
-											<div>${i2.name }</div>
+											<div><a href="detail?id=${i2.itemnums }">${i2.brand }</a></div>
+											<div><a href="detail?id=${i2.itemnums }">${i2.name }</a></div>
+										</li>
+									</c:forEach>
+								</c:forEach>
+							</ul>
+						</section>
+						<section class="rank-category">
+							<div>Solid</div>
+							<ul>
+								<c:forEach var="i" items="${items }" begin="3" end="3">
+									<c:forEach var="i2" items="${i}" begin="0" end="2">
+										<li>
+											<div>
+												<a href="detail?id=${i2.itemnums }"><img src="../../images/${i2.img }"></a>
+											</div>
+											<div><a href="detail?id=${i2.itemnums }">${i2.brand }</a></div>
+											<div><a href="detail?id=${i2.itemnums }">${i2.name }</a></div>
+										</li>
+									</c:forEach>
+								</c:forEach>
+							</ul>
+						</section>
+						<section class="rank-category">
+							<div>Rollon</div>
+							<ul>
+								<c:forEach var="i" items="${items }" begin="4" end="4">
+									<c:forEach var="i2" items="${i}" begin="0" end="2">
+										<li>
+											<div>
+												<a href="detail?id=${i2.itemnums }"><img src="../../images/${i2.img }"></a>
+											</div>
+											<div><a href="detail?id=${i2.itemnums }">${i2.brand }</a></div>
+											<div><a href="detail?id=${i2.itemnums }">${i2.name }</a></div>
 										</li>
 									</c:forEach>
 								</c:forEach>

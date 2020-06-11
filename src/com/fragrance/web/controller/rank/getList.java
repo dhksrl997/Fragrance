@@ -28,14 +28,25 @@ public class getList extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+		request.setCharacterEncoding("UTF-8");
+
+		int page = 1;
+
+		if (request.getParameter("p") != null && !request.getParameter("p").equals("")) {
+			String page_ = request.getParameter("p");
+			page = Integer.parseInt(page_);
+			System.out.println(page);
+		}
 		RankServices service = new RankServices();
 		List<Items> list = null;
 		String get = request.getParameter("c");
-		System.out.println(get);
+//		System.out.println(get);
 		try {
-			
+
 			if (get.equals("m"))
-				list = service.getManItems();
+				list = service.getManItems(page);
 
 			if (get.equals("w"))
 				list = service.getWomenItems();
@@ -56,9 +67,11 @@ public class getList extends HttpServlet {
 			e.printStackTrace();
 		}
 		request.setAttribute("list", list);
-//		request.getRequestDispatcher("/HTML/rank/list.jsp").forward(request, response);
-		TilesContainer container = TilesAccess.getContainer(
-		        request.getSession().getServletContext());
+//		System.out.println("test ==="+"rank.list?c=" + get + "?p=" + page);
+
+		TilesContainer container = TilesAccess.getContainer(request.getSession().getServletContext());
 		container.render("rank.list", request, response);
+
+//		request.getRequestDispatcher("/HTML/rank/list.jsp").forward(request, response);
 	}
 }

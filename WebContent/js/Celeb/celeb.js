@@ -51,7 +51,7 @@ window.addEventListener("load", function(){
                     </section>
                   <section class="d-buttons">
                         <h1 class="d-none">d-buttons</h1>
-                        <input type="button" class="d-button" value="상세정보">
+                       <a href="/HTML/rank/detail?id=${notices.itemNums}"> <input type="button" class="d-button" value="상세정보"> </a>
                         <input type="button" class="d-unlike">
                         <input type="button" class="d-like d-none">
                     </section>

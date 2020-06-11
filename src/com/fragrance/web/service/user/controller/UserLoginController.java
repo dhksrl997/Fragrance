@@ -44,7 +44,7 @@ public class UserLoginController extends HttpServlet {
 		}
 		if (result == 1) {
 			response.sendRedirect("/HTML/index");
-		} else if (result == -2) {
+		} else  {
 			System.out.println("login denied");
 			System.out.println(result);
 			response.setContentType("text/html; charset=UTF-8");

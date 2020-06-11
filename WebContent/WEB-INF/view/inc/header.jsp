@@ -22,29 +22,29 @@
 
 			<nav class="logo">
 				<h1>
-					<a href="/index"><img src="../../images/logo-img.png" /></a>
+					<a href="../index"><img src="../../images/banner/logo-img.png" /></a>
 				</h1>
 			</nav>
 
 			<nav class="member-menu">
 				<h1 class="d-none">로그인메뉴</h1>
 				<ul>
-					<li><a href="/login">로그인</a></li>
-					<li><a href="/login">회원가입</a></li>
+					<li><a href="login.html">로그인</a></li>
+					<li><a href="">회원가입</a></li>
 				</ul>
 			</nav>
 		</section>
 
+	</header>
 		<section class="main-category">
 			<h1 class="d-none">메인 메뉴</h1>
 			<nav class="main-menu">
 				<h1 class="d-none">메인 메뉴</h1>
 				<ul>
 
-					<li><a href="/HTML/rank/rankIndex">Rank</a></li>
-					<li><a href="/HTML/celeb/celeb.jsp">Celeb</a></li>
-					<li><a href="/HTMl/rec/recomm.jsp">Recomm.</a></li>
+					<li><a href="/HTML/rank/rankIndex" class="hide show">Rank</a></li>
+					<li><a href="/HTML/celeb/celeb" class="hide show">Celeb</a></li>
+					<li><a href="/HTML/rec/recomm" class="hide show">Recommed</a></li>
 				</ul>
 			</nav>
 		</section>
-	</header>

@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 import com.fragrance.web.entity.User;
 import com.fragrance.web.service.user.UserServices;
 
-
 @WebServlet("/reg")
 public class UserRegController extends HttpServlet {
 	@Override
@@ -24,14 +23,24 @@ public class UserRegController extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
+		UserServices service = new UserServices();
 		List<User> userList = null;
 		User user = new User();
 		user.setMail(request.getParameter("email"));
 		user.setName(request.getParameter("name"));
 		user.setPw(request.getParameter("pw"));
 		user.setNickName(request.getParameter("nickname"));
+		
+		String age=request.getParameter("age");
 		try {
-			user.setAge(Integer.parseInt(request.getParameter("age")));
+			if(service.isNumber(age)) 
+				user.setAge(Integer.parseInt(request.getParameter("age")));
+			else {
+				PrintWriter out = response.getWriter();
+				out.println("<script>alert('나이는 숫자를 입력해주세요.'); location.href='/login.jsp#signup';</script>");
+				out.flush();
+				return;
+			}
 		} catch (NumberFormatException e) {
 			PrintWriter out = response.getWriter();
 			out.println("<script>alert('나이는 숫자를 입력해주세요.'); location.href='/login.jsp#signup';</script>");
@@ -50,7 +59,7 @@ public class UserRegController extends HttpServlet {
 			user.setGender("여성");
 		}
 
-		UserServices service = new UserServices();
+		
 
 		try {
 			result = service.regUser(user);

@@ -10,108 +10,13 @@ import java.util.List;
 
 import com.fragrance.web.entity.Items;
 
-public class RankServices {
-	public List<Items> getManLikeList() throws SQLException, ClassNotFoundException {
-		List<Items> list = new ArrayList<>();
-		int index = 0;
-		String sql = "Select * from Items order by maleLike desc LIMIT 3;";
-		String url = "jdbc:mysql://dev.notepubs.com:9898/fragrance?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
-		Class.forName("com.mysql.cj.jdbc.Driver");
-		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
-		PreparedStatement st = con.prepareStatement(sql);
-		ResultSet rs = st.executeQuery();
-		while (rs.next()) {
-			Items items = new Items(rs.getInt("itemnums"), rs.getString("img"), rs.getString("name"),
-					rs.getString("brand"), rs.getInt("size"), rs.getInt("price"), rs.getString("scent"),
-					rs.getString("gender"), rs.getInt("maleLike"), rs.getInt("femaleLike"), rs.getString("type"),
-					rs.getString("content"), rs.getString("tag"));
-			list.add(items);
-		}
-		rs.close();
-		st.close();
-		con.close();
-		return list;
-	}
-
-	public List<Items> getWomanLikeList() throws SQLException, ClassNotFoundException {
-		List<Items> list = new ArrayList<>();
-		int index = 0;
-
-		String sql = "Select * from Items order by femaleLike desc LIMIT 3;";
-		String url = "jdbc:mysql://dev.notepubs.com:9898/fragrance?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
-		Class.forName("com.mysql.cj.jdbc.Driver");
-		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
-		PreparedStatement st = con.prepareStatement(sql);
-		ResultSet rs = st.executeQuery();
-		while (rs.next()) {
-			Items items = new Items(rs.getInt("itemnums"), rs.getString("img"), rs.getString("name"),
-					rs.getString("brand"), rs.getInt("size"), rs.getInt("price"), rs.getString("scent"),
-					rs.getString("gender"), rs.getInt("maleLike"), rs.getInt("femaleLike"), rs.getString("type"),
-					rs.getString("content"), rs.getString("tag"));
-			list.add(items);
-		}
-		rs.close();
-		st.close();
-		con.close();
-		return list;
-	}
-
-	public List<Items> getUnisexLikeList() throws SQLException, ClassNotFoundException {
-		List<Items> list = new ArrayList<>();
-		int index = 0;
-
-		String sql = "SELECT *,maleLike+femaleLike as Likeresult FROM Items order by Likeresult DESC LIMIT 3";
-		String url = "jdbc:mysql://dev.notepubs.com:9898/fragrance?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
-		Class.forName("com.mysql.cj.jdbc.Driver");
-		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
-		PreparedStatement st = con.prepareStatement(sql);
-		ResultSet rs = st.executeQuery();
-		while (rs.next()) {
-			Items items = new Items(rs.getInt("itemnums"), rs.getString("img"), rs.getString("name"),
-					rs.getString("brand"), rs.getInt("size"), rs.getInt("price"), rs.getString("scent"),
-					rs.getString("gender"), rs.getInt("maleLike"), rs.getInt("femaleLike"), rs.getString("type"),
-					rs.getString("content"), rs.getString("tag"));
-			list.add(items);
-		}
-		rs.close();
-		st.close();
-		con.close();
-		return list;
-	}
-
+public class HomeService {
 	
-
-	public List<Items> getManItems(int page) throws SQLException, ClassNotFoundException {
-		List<Items> list = new ArrayList<>();
-		int index = 0;
-//		String sql = "select * from Notice ORDER BY regdate DESC limit 10 offset ?";
-		String sql = "SELECT m.* from(SELECT @rownum:=@rownum+1 num, I.* FROM Items I, (SELECT @rownum:=0) TMP where gender='남성') m limit 10 offset ?;";
-		String url = "jdbc:mysql://dev.notepubs.com:9898/fragrance?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
-		Class.forName("com.mysql.cj.jdbc.Driver");
-		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
-		PreparedStatement st = con.prepareStatement(sql);
-		st.setInt(1, (page-1)*10);  //1
-		ResultSet rs = st.executeQuery();
-//		st.setInt(1, (page-1)*5);
-		while (rs.next()) {
-			Items items = new Items(rs.getInt("itemnums"), rs.getString("img"), rs.getString("name"),
-					rs.getString("brand"), rs.getInt("size"), rs.getInt("price"), rs.getString("scent"),
-					rs.getString("gender"), rs.getInt("maleLike"), rs.getInt("femaleLike"), rs.getString("type"),
-					rs.getString("content"), rs.getString("tag"));
-			index =rs.getInt("num");
-			list.add(items);
-		}
-		rs.close();
-		st.close();
-		con.close();
-		return list;
-	}
-
-	public List<Items> getWomenItems() throws SQLException, ClassNotFoundException {
+	public List<Items> getHomeMan() throws SQLException, ClassNotFoundException {
 		List<Items> list = new ArrayList<>();
 		int index = 0;
 
-		String sql = "Select * from Items where gender = '여성'";
+		String sql = "Select * from Items where gender = '남성' order by maleLike+femaleLike desc LIMIT 1;";
 		String url = "jdbc:mysql://dev.notepubs.com:9898/fragrance?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
@@ -131,11 +36,11 @@ public class RankServices {
 		return list;
 	}
 
-	public List<Items> getUnisexItems() throws SQLException, ClassNotFoundException {
+	public List<Items> getHomeWoman() throws SQLException, ClassNotFoundException {
 		List<Items> list = new ArrayList<>();
 		int index = 0;
 
-		String sql = "Select * from Items where gender = '공용'";
+		String sql = "Select * from Items where gender = '여성' order by maleLike+femaleLike desc LIMIT 1;";
 		String url = "jdbc:mysql://dev.notepubs.com:9898/fragrance?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
@@ -155,11 +60,11 @@ public class RankServices {
 		return list;
 	}
 
-	public List<Items> getSolidItems() throws SQLException, ClassNotFoundException {
+	public List<Items> getHomeUni() throws SQLException, ClassNotFoundException {
 		List<Items> list = new ArrayList<>();
 		int index = 0;
 
-		String sql = "Select * from Items where type = '고체'";
+		String sql = "Select * from Items where gender = '공용' order by maleLike+femaleLike desc LIMIT 1;";
 		String url = "jdbc:mysql://dev.notepubs.com:9898/fragrance?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
@@ -178,41 +83,16 @@ public class RankServices {
 		con.close();
 		return list;
 	}
-
-	public List<Items> getRollItems() throws SQLException, ClassNotFoundException {
-		List<Items> list = new ArrayList<>();
-		int index = 0;
-
-		String sql = "Select * from Items where type = '롤온'";
-		String url = "jdbc:mysql://dev.notepubs.com:9898/fragrance?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
-		Class.forName("com.mysql.cj.jdbc.Driver");
-		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
-		PreparedStatement st = con.prepareStatement(sql);
-		ResultSet rs = st.executeQuery();
-//		st.setInt(1, (page-1)*5);
-		while (rs.next()) {
-			Items items = new Items(rs.getInt("itemnums"), rs.getString("img"), rs.getString("name"),
-					rs.getString("brand"), rs.getInt("size"), rs.getInt("price"), rs.getString("scent"),
-					rs.getString("gender"), rs.getInt("maleLike"), rs.getInt("femaleLike"), rs.getString("type"),
-					rs.getString("content"), rs.getString("tag"));
-			list.add(items);
-		}
-		rs.close();
-		st.close();
-		con.close();
-		return list;
-	}
-
-	public List<Items> getItemDetail(int itemnums) throws ClassNotFoundException, SQLException {
+	
+	public List<Items> getHomeEtc() throws ClassNotFoundException, SQLException {
 		// TODO Auto-generated method stub
 		
 		List<Items> list = new ArrayList<>();
-		String sql = "Select * from Items where itemnums = ?;";
+		String sql = "select *from Items  where type = '롤온' or type='고체' order by maleLike+femaleLike desc LIMIT 1;";
 		String url = "jdbc:mysql://dev.notepubs.com:9898/fragrance?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
 		PreparedStatement st = con.prepareStatement(sql);
-		st.setInt(1,itemnums);
 		ResultSet rs = st.executeQuery();
 		
 		if(rs.next()) {
@@ -228,15 +108,19 @@ public class RankServices {
 		return list;
 	}
 
-	public List<Items> getSolidLikeList() throws ClassNotFoundException, SQLException {
+	public List<Items> getHomeSummer()
+			throws ClassNotFoundException, SQLException {
+
 		List<Items> list = new ArrayList<>();
-		int index = 0;
-		String sql = "select *from Items where type='고체' order by maleLike+femaleLike desc;";
+
+		String sql = "select *from Items where tag like'%여름%' order by maleLike+femaleLike desc LIMIT 1;";
 		String url = "jdbc:mysql://dev.notepubs.com:9898/fragrance?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
 		PreparedStatement st = con.prepareStatement(sql);
+
 		ResultSet rs = st.executeQuery();
+
 		while (rs.next()) {
 			Items items = new Items(rs.getInt("itemnums"), rs.getString("img"), rs.getString("name"),
 					rs.getString("brand"), rs.getInt("size"), rs.getInt("price"), rs.getString("scent"),
@@ -247,18 +131,23 @@ public class RankServices {
 		rs.close();
 		st.close();
 		con.close();
+
 		return list;
 	}
+	
+	public List<Items> getHomeCrab()
+			throws ClassNotFoundException, SQLException {
 
-	public List<Items> getRollonLikeList() throws SQLException, ClassNotFoundException {
 		List<Items> list = new ArrayList<>();
-		int index = 0;
-		String sql = "select *from Items where type='롤온' order by maleLike+femaleLike desc;";
+
+		String sql = "select *from Items where tag like'%게자리%' order by maleLike+femaleLike desc LIMIT 1;";
 		String url = "jdbc:mysql://dev.notepubs.com:9898/fragrance?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
 		PreparedStatement st = con.prepareStatement(sql);
+
 		ResultSet rs = st.executeQuery();
+
 		while (rs.next()) {
 			Items items = new Items(rs.getInt("itemnums"), rs.getString("img"), rs.getString("name"),
 					rs.getString("brand"), rs.getInt("size"), rs.getInt("price"), rs.getString("scent"),
@@ -269,10 +158,37 @@ public class RankServices {
 		rs.close();
 		st.close();
 		con.close();
+
 		return list;
 	}
+	
+	public List<Items> getHomeDaily()
+			throws ClassNotFoundException, SQLException {
 
+		List<Items> list = new ArrayList<>();
 
+		String sql = "select *from Items where tag like'%데일리%' order by maleLike+femaleLike desc LIMIT 1;";
+		String url = "jdbc:mysql://dev.notepubs.com:9898/fragrance?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
+		PreparedStatement st = con.prepareStatement(sql);
 
+		ResultSet rs = st.executeQuery();
 
+		while (rs.next()) {
+			Items items = new Items(rs.getInt("itemnums"), rs.getString("img"), rs.getString("name"),
+					rs.getString("brand"), rs.getInt("size"), rs.getInt("price"), rs.getString("scent"),
+					rs.getString("gender"), rs.getInt("maleLike"), rs.getInt("femaleLike"), rs.getString("type"),
+					rs.getString("content"), rs.getString("tag"));
+			list.add(items);
+		}
+		rs.close();
+		st.close();
+		con.close();
+
+		return list;
+	}
+	
+	
+	
 }
