@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fragrance.web.entity.Reply;
+import com.mysql.cj.protocol.ServerSession;
 
 public class CommentServices {
 
@@ -21,7 +22,7 @@ public class CommentServices {
 		PreparedStatement st = con.prepareStatement(sql);
 
 		st.setInt(1, reply.getItemNums());
-		st.setString(2, "WANGI");
+		st.setString(2, reply.getWriterName() );
 		st.setString(3, reply.getContent());
 		
 		result = st.executeUpdate();

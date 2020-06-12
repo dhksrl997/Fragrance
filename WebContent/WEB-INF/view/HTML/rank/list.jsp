@@ -9,31 +9,28 @@
 		<section class="sub-menu">
 			<h1 class="d-none">서브메뉴</h1>
 			<ul>
-				<li><a href="list?c=m" class="hide show">Men</a></li>
-				<li><a href="list?c=w" class="hide show">Women</a></li>
-				<li><a href="list?c=u" class="hide show">UNISEX</a></li>
-				<li><a href="list?c=s" class="hide show">Solid</a></li>
-				<li><a href="list?c=r" class="hide show">Rollerballs</a></li>
+				<li><a href="list?c=m&p=1" class="hide show">Men</a></li>
+				<li><a href="list?c=w&p=1" class="hide show">Women</a></li>
+				<li><a href="list?c=u&p=1" class="hide show">Unisex</a></li>
+				<li><a href="list?c=s&p=1" class="hide show">Solid</a></li>
+				<li><a href="list?c=r&p=1" class="hide show">Rollerball</a></li>
 			</ul>
 		</section>
-
+	
 	</section>
 	<section class="banner">
 		<div class="banner-slide">
-			<img src="../../../../images/banner/banner2.png" width="1240px"
-				height="500px">
+			<img src="../../../../images/banner/banner2.png" >
 		</div>
 		<div class="banner-slide">
-			<img src="../../../../images/banner/dior.png" width="1240px"
-				height="500px">
+			<img src="../../../../images/banner/banner-darks.jpg"
+			style="background-size:contain;">
 		</div>
 		<div class="banner-slide">
-			<img src="../../../../images/banner/BleudeChanel-banner.png"
-				width="1240px" height="500px">
+			<img src="../../../../images/banner/BleudeChanel-banner.png">
 		</div>
 		<div class="banner-slide">
-			<img src="../../../../images/banner/chanel-banner.jpg" width="1240px"
-				height="500px">
+			<img src="../../../../images/banner/chanel-banner.jpg">
 		</div>
 
 	</section>
@@ -61,7 +58,7 @@
 						<td>${(param.p*10)-10+i }</td>
 						<td class="table-img"><a href="detail?id=${list.itemnums }"><img
 								width="160px" height="140px" src="../../images/${list.img }"></a></td>
-						<td><a href="detail?id=${list.itemnums}">${list.name }</a></td>
+						<td class="effect"><a href="detail?id=${list.itemnums}">${list.name }</a></td>
 						<td>${list.brand }</td>
 						<td>${list.size }</td>
 						<td>${list.scent }</td>
@@ -75,18 +72,35 @@
 		</table>
 
 		<div class="pager">
-			<ul>
+         <ul>
+            <c:forEach var="in" begin="1" end="${index }">
+               <c:set value="${pa+1 }" var="pa" />
 
-				<c:forEach begin="0" end="5">
-					<c:set value="${x+1 }" var="x" />
-					<c:if test="${param.p==x }">
-						<li><a class="orange" href="list?c=${param.c }&p=${x}">${x }</a></li>
-					</c:if>
-					<c:if test="${param.p!=x }">
-						<li><a href="list?c=${param.c }&p=${x}">${x }</a></li>
-					</c:if>
-				</c:forEach>
-			</ul>
-		</div>
+               <c:choose>
+                  
+                  <c:when test="${in eq param.p }">
+                     <li><a
+                        style=" font-size: 40px; color: red; margin-bottom: 20px"
+                        href="list?c=${param.c }&p=${pa}"><div>${pa }</div></a></li>
+                  </c:when>
+
+                  <c:when test="${param.p+2<pa}">
+                     <li><a
+                        style="position: absolute; left: 0px; top: 0px; display: none"
+                        href="list?c=${param.c }&p=${pa}">${pa }</a></li>
+                  </c:when>
+                  <c:when test="${param.p-2>pa}">
+                     <li><a style="position: absolute; display: none"
+                        href="list?c=${param.c }&p=${pa}">${pa }</a></li>
+                  </c:when>
+
+                  <c:otherwise>
+                     <li><a href="list?c=${param.c }&p=${pa}">${pa }</a></li>
+                  </c:otherwise>
+               </c:choose>
+            </c:forEach>
+            <li style="font-size:20px;right:${param.p};">${param.p }/${index }page</li>
+         </ul>
+      </div>
 	</section>
 </main>

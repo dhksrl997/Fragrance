@@ -9,7 +9,6 @@
 		<section class="search-result margin">
 			<h1>${param.query }에 대한 향수 검색결과</h1>
 			<c:forEach var="i" items="${item }">
-				
 					<div class="search-item-list">
 						<div class="search-img">
 							<a href="detail?id=${i.itemnums }"><img src="/images/${i.img }" width="200px" height="200px" alt=""></a>
@@ -20,7 +19,6 @@
 								${i.price }, ${i.type}</a></div>
 						</div>
 					</div>
-				
 			</c:forEach>
 		</section>
 

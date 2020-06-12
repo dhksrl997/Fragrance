@@ -1,22 +1,19 @@
-/*---------濡쒓퀬 �쐞移�--------------*/
+/*---------logo--------------*/
 .logo {
-    --background: pink;
     height: 70px;
     width: 300px;
     text-align: center;
     margin-top: 15px;
 }
 
-/*--------�뿤�뜑 �쐞移�------------*/
-
-
+/*--------header------------*/
 .header-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-
+/*------------------search-----------------------------*/
 .search{
     position: relative;
     margin-left: 40px;
@@ -34,9 +31,6 @@
     position: absolute;
     bottom: 12px;
     background: rgba(0, 0, 0, 0);
-
-  
-
 }
 .search input[type="text"]{
     
@@ -44,14 +38,14 @@
     border-radius: 75px;
 }
 
-
+/*--------------longin & memeber -----------------*/
 .member-menu{
     margin-right: 40px;
 }
 
 .member-menu>ul {
     display: flex;
-    font-family: "留묒� 怨좊뵓", "怨좊뵓", Arial, Helvetica, sans-serif;
+    font-family: 'Lato', "고딕", Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 15px;
     color: #000;
@@ -62,7 +56,7 @@
     padding-left: 20px;
 }
 
-
+/*------main menu------------*/
 .main-category {
     height: 60px;
     position: sticky;
@@ -70,14 +64,13 @@
     top: 0px;
     background-color: rgb(255, 255, 255, 0.8);
     z-index: 999;
-   
 }
 
 
 .main-menu ul {
     display: flex;
     justify-content: center;
-    font-family: "留묒� 怨좊뵓", "怨좊뵓", Arial, Helvetica, sans-serif;
+    font-family: "맑은 고딕", "고딕", Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 50px;
     color: #000;
@@ -85,7 +78,6 @@
 }
 
 .main-menu>ul>li {
-    --padding-top: 10px;
     padding-right: 70px;
     padding-left: 70px;
     padding-bottom: 10px;
@@ -93,17 +85,19 @@
 
 .main-menu a {
     color: #000;
-    --background: white;
+    transition: 0.3s;
+	background-color: rgb(255, 255, 255, 0);
 }
 
 .main-menu a:hover {
     color: brown;
 }
 
-/*------body (�꽌釉뚮찓�돱遺��꽣 footer�쟾源뚯�)-----*/
+/*---------------body-------------------------------------*/
 #body {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
+	text-align: center;
 }
 
 
@@ -132,11 +126,7 @@
     color: #9b0074;
 }
 
-.footer-container {
-    text-align: center;
-    background: rgb(11, 71, 11);
 
-}
 
 .rank-category {
     text-align: center;
@@ -162,8 +152,6 @@
 }
 .rank-category li>div:first-child{
     display:inline;
-    
-    --background-color: darkblue;
 }
 .rank-img{
     padding-left: 0px;
@@ -195,11 +183,5 @@
 .rank-category a:hover{
 	text-decoration:none;
 }
-.on{
-    position: fixed;
-    left: 1800px;
-    width: 58px;
-    height: 58px;
-    background: url(https://res.kurly.com/pc/service/common/1903/btn_pagetop_v2.png) no-repeat 50% 50%;
-    font-size: 0px;
-}
+
+

@@ -10,9 +10,9 @@
 						<ul>
 							<li><a href="list?c=m&p=1" class="hide show">Men</a></li>
 							<li><a href="list?c=w&p=1" class="hide show">Women</a></li>
-							<li><a href="list?c=u&p=1" class="hide show">UNISEX</a></li>
+							<li><a href="list?c=u&p=1" class="hide show">Unisex</a></li>
 							<li><a href="list?c=s&p=1" class="hide show">Solid</a></li>
-							<li><a href="list?c=r&p=1" class="hide show">Rollerballs</a></li>
+							<li><a href="list?c=r&p=1" class="hide show">Rollerball</a></li>
 						</ul>
 					</section>
 
@@ -83,7 +83,7 @@
 							</ul>
 						</section>
 						<section class="rank-category">
-							<div>Rollon</div>
+							<div>Rollerball</div>
 							<ul>
 								<c:forEach var="i" items="${items }" begin="4" end="4">
 									<c:forEach var="i2" items="${i}" begin="0" end="2">

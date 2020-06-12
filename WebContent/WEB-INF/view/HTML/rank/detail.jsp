@@ -10,9 +10,9 @@
                         <ul>
                             <li><a href="list?c=m">Men</a></li>
 							<li><a href="list?c=w">Women</a></li>
-							<li><a href="list?c=u">UNISEX</a></li>
+							<li><a href="list?c=u">Unisex</a></li>
 							<li><a href="list?c=s">Solid</a></li>
-							<li><a href="list?c=r">Rollerballs</a></li>
+							<li><a href="list?c=r">Rollerball</a></li>
                         </ul>
                     </section>
 

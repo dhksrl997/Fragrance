@@ -39,14 +39,14 @@
 
 			<nav class="logo">
 				<h1>
-					<a href="index.html"><img src="images/logo-img.png" /></a>
+					<a href="index"><img src="images/logo-img.png" /></a>
 				</h1>
 			</nav>
 
 			<nav class="member-menu">
 				<h1 class="d-none">로그인메뉴</h1>
 				<ul>
-					<li><a href="login.html">로그인</a></li>
+					<li><a href="/login">로그인</a></li>
 					<li><a href="">회원가입</a></li>
 				</ul>
 			</nav>

@@ -9,9 +9,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.fragrance.web.commonservice.CommentServices;
 import com.fragrance.web.entity.Reply;
+import com.fragrance.web.entity.User;
 
 @WebServlet("/HTML/rank/comment")
 public class RegCommentController extends HttpServlet {
@@ -22,16 +24,21 @@ public class RegCommentController extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=UTF-8"); 
+		HttpSession session = request.getSession();
+
 		int id = Integer.parseInt(request.getParameter("id"));
 		Reply reply = new Reply();
 		List<Reply> replys = null;
 		/////
+		User user =new User();
 		String comment = request.getParameter("regcomment");
 
 		CommentServices service = new CommentServices();
 		reply.setItemNums(id);
-		reply.setWriterName("WANGI");
+		reply.setWriterName((String)(session.getAttribute("nickName")));
 		reply.setContent(comment);
+		
+		System.out.println("작성자 이름이뭐야 : "+reply.getWriterName());
 		try {
 			service.regComment(reply);
 		} catch (ClassNotFoundException e1) {

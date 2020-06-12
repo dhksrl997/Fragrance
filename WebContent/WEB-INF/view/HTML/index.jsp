@@ -78,8 +78,8 @@
 									<dt>&nbsp</dt>
 									<dt>&nbsp</dt>
 									<dt>&nbsp</dt>
-									<dt>${u.brand }</dt>
-									<dd>${u.name }</dd>
+									<dt>${u.name }</dt>
+									<dd>${u.brand }</dd>
 									<dd>&nbsp</dd>
 								</dl>
 						</span>
@@ -101,8 +101,8 @@
 									<dt>&nbsp</dt>
 									<dt>&nbsp</dt>
 									<dt>&nbsp</dt>
-									<dt>${e.brand }</dt>
-									<dd>${e.name }</dd>
+									<dt>${e.name }</dt>
+									<dd>${e.brand }</dd>
 									<dd>&nbsp</dd>
 								</dl>
 						</span>

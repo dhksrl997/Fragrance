@@ -27,15 +27,16 @@ public class SearchCtrl extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=UTF-8");
 		String query = request.getParameter("query");
+		System.out.println(query);
 		List<Items> itemlist = null;
 		List<Celeb> celeblist = null;
 
 		SearchServices service = new SearchServices();
 		try {
 			itemlist = service.getSearchItems(query);
-			System.out.println("a");
+//			System.out.println("a");
 			celeblist = service.getSearchCeleb(query);
-			System.out.println("b");
+//			System.out.println("b");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

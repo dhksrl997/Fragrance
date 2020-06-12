@@ -6,12 +6,6 @@
     justify-content: center;
 }
 
-/*-----------------로고----------------*/
-
-.logo{
-    
-}
-
 /*--------------------검색창--------------------*/
 .search{
     height: 40px;
@@ -24,20 +18,36 @@
 }
 
 /*-----------------배너----------------------------------*/
+
+.banner{
+	height: 500px;
+	overflow: hidden;
+	text-align: center;
+	
+}
+
 .top-banner{ /*상단 배너*/
-    margin: 30px auto 0;
-    text-align: center;
-    display: block;
-    max-width: 1500px;
-    max-height: 400px;
+	position: relative;
+    --margin: 30px auto 0;
+    top:-80px;
+    
 }
 .middle-banner{/*중하단 배너*/
+    margin: 30px auto 0;
+    
+    display: block;
+}
+
+/*
+.middle-banner{중하단 배너
     margin: 10px auto 10px;
     text-align: center;
     display: block;
     max-width: 1500px;
-    max-height: 400px;
+    max-height: 400px; 
 }
+*/
+
 
 /*-----------------메인----------------------------------*/
 .grid-container1{

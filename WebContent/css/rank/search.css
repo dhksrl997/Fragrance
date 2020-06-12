@@ -96,19 +96,4 @@
 	text-overflow: ellipsis;
 	 vertical-align: top;
     word-break: break-all;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
 }
-
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: box;
-    overflow: hidden;
-    margin-top: 4px;
-    font-size: 13px;
-    line-height: 23px;
-    color: #5c5c5c;
-    vertical-align: top;
-    word-break: break-all;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;

@@ -1,4 +1,4 @@
-package com.fragrance.web.service.user.controller;
+package com.fragrance.web.controller.user;
 
 import java.io.IOException;
 import java.io.PrintWriter;

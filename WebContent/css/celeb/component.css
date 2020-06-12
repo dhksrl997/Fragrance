@@ -1,6 +1,5 @@
 ﻿/*---------logo--------------*/
 .logo {
-    --background: pink;
     height: 70px;
     width: 300px;
     text-align: center;
@@ -31,10 +30,8 @@
 	width: 31px;
 	text-indent: -9999px;
 	position: absolute;
-	/* right: 20px; */
 	bottom: 12px;
 	background: rgba(0, 0, 0, 0);
-	/* margin-left: 40px; */
 }
 
 .search input[type="text"] {
@@ -52,9 +49,7 @@
 .member-menu>ul {
     display: flex;
     font-family: 'Lato', "고딕", Arial, Helvetica, sans-serif;
-    --font-family:'Lato' , sans-serif;
-    background-color: #f8f8f8;
-    --font-weight: bold;
+    background-color: white;
     font-size: 15px;
     color: #000;
 }
@@ -72,8 +67,7 @@
 	position: -webkit-sticky;
 	top: 0px;
 	background-color: rgb(255, 255, 255, 0.7);
-	z-index: 999; -
-	-margin-left: 60px;
+	z-index: 999; 
 }
 
 .main-menu ul {
@@ -87,7 +81,6 @@
 }
 
 .main-menu>ul>li { 
-	--padding-top: 10px;
 	padding-right: 70px;
 	padding-left: 70px;
 	padding-bottom: 10px;
@@ -123,6 +116,7 @@
 }
 
 
+
 /*---------------------body ------------------------*/
 #body{
     display: flex;
@@ -136,12 +130,16 @@
 
 .img:hover{
     opacity: 0.5;
+    border: 3px solid lightgrey;
+    border-radius: 20px; 
+    transform: scale( 1.0, 1.0 );
 }
 .item1 img {
     resize: both; /* 이미지 최대 사이즈에 적용 */
     display: block;
     max-width: 765px; /* 넓이를 지정 */
     max-height: 500px;
+    
     
 }
 .item2 img {

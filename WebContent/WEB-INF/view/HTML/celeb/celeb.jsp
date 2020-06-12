@@ -5,9 +5,9 @@
 		<section class="container">
 			<h1 class="d-none">Content Info</h1>
 
-			<section>
+			<section class="banner">
 				<h1 class="d-none">top-banner</h1>
-				<img class="top-banner" src="../../images/banner/YSL-LIBRE-banner.jpg">
+				<img class="top-banner" src="../../images/banner/LV-banner3.png">
 			</section>
 
 			<section class="grid-container1">

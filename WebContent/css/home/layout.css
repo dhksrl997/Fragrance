@@ -19,7 +19,6 @@
 
 /*----------로그인-------------*/
 .member-menu{
-    /* background: skyblue; */
     height: 40px;
 }
 
@@ -29,10 +28,8 @@
 #banner{
     margin: 30px auto 0;
     height: 400px;
-    background:red;
     background: url("../../images/banner/banner-darks.jpg") no-repeat center;
     background-size:cover;
-    /* width: 1240px; */
      
 }
     #banner .content-container{
@@ -45,7 +42,6 @@
 #body{
     height:auto;
     
-   /* background: rgb(0, 30, 128); */
 }
 .main{
     height:max-content;
