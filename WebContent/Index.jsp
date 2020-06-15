@@ -39,7 +39,7 @@
 
 			<nav class="logo">
 				<h1>
-					<a href="index"><img src="images/logo-img.png" /></a>
+					<a href="/index"><img src="images/logo-img.png" /></a>
 				</h1>
 			</nav>
 

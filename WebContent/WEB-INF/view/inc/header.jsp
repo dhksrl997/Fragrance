@@ -8,7 +8,7 @@
 
 		<nav class="search">
 			<h1 class="d-none">검색폼</h1>
-			<form>
+			<form action = "/HTML/search" method = "get">
 				<fieldset>
 					<div>
 						<legend class="d-none">검색폼</legend>
@@ -23,7 +23,7 @@
 
 		<nav class="logo">
 			<h1>
-				<a href="/HTML/index"><img
+				<a href="/index"><img
 					src="../../images/banner/logo-img.png" /></a>
 			</h1>
 		</nav>
@@ -37,7 +37,7 @@
 				</c:if>
 				<c:set var="admin" value="admin" />
 				<c:if test="${sessionScope.isAdmin == admin}">
-					<li><a href="/Adminpage">관리자 페이지 </a></li>
+					<li><a href="/admin/item/prdlist">관리자 페이지 </a></li>
 				</c:if>
 
 				<c:if test="${nickName == null }">

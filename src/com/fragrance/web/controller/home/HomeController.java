@@ -17,7 +17,7 @@ import com.fragrance.web.entity.Items;
 import com.fragrance.web.service.HomeService;
 import com.fragrance.web.service.RecommentService;
 
-@WebServlet("/HTML/index")
+@WebServlet("/index")
 public class HomeController extends HttpServlet {
 
 	@Override

@@ -20,19 +20,14 @@
 	</section>
 	<section class="banner">
 		<div class="banner-slide">
-			<img src="../../../../images/banner/banner2.png" >
+			<img src="/../../images/banner/main-mainbn1.png" >
 		</div>
 		<div class="banner-slide">
-			<img src="../../../../images/banner/banner-darks.jpg"
-			style="background-size:contain;">
+			<img src="/../../images/banner/main-mainbn2.png">
 		</div>
 		<div class="banner-slide">
-			<img src="../../../../images/banner/BleudeChanel-banner.png">
+			<img src="/../../images/banner/main-mainbn3.png">
 		</div>
-		<div class="banner-slide">
-			<img src="../../../../images/banner/chanel-banner.jpg">
-		</div>
-
 	</section>
 
 

@@ -36,7 +36,6 @@ public class CelebController extends HttpServlet {
 			e.printStackTrace();
 		}
 		request.setAttribute("c", celeb);
-//		 request.getRequestDispatcher("/HTML/celeb/celeb.jsp").forward(request, response);
 		TilesContainer container = TilesAccess.getContainer(
 		        request.getSession().getServletContext());
 		container.render("celeb.celeb", request, response);

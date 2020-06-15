@@ -17,7 +17,6 @@ import com.fragrance.web.commonservice.SearchServices;
 import com.fragrance.web.entity.Celeb;
 import com.fragrance.web.entity.Items;
 
-//@WebServlet("/search")
 @WebServlet(urlPatterns = {"/HTML/search", "/HTML/rank/search","/HTML/celeb/search","/HTML/rec/search"})
 public class SearchCtrl extends HttpServlet {
 	@Override
@@ -27,16 +26,13 @@ public class SearchCtrl extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=UTF-8");
 		String query = request.getParameter("query");
-		System.out.println(query);
 		List<Items> itemlist = null;
 		List<Celeb> celeblist = null;
 
 		SearchServices service = new SearchServices();
 		try {
 			itemlist = service.getSearchItems(query);
-//			System.out.println("a");
 			celeblist = service.getSearchCeleb(query);
-//			System.out.println("b");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -48,7 +44,6 @@ public class SearchCtrl extends HttpServlet {
 		System.out.println(request.getRequestURI());
 		request.setAttribute("item", itemlist);
 		request.setAttribute("celeb", celeblist);
-//	request.getRequestDispatcher("/WEB-INF/view/HTML/rank/search.jsp").forward(request, response);
 
 		TilesContainer container = TilesAccess.getContainer(request.getSession().getServletContext());
 		container.render("rank.search", request, response);

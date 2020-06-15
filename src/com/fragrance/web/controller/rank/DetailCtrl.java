@@ -29,9 +29,6 @@ public class DetailCtrl extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		int itemnums = Integer.parseInt(request.getParameter("id"));
 
-//			response.sendRedirect("/detail");
-		//////
-
 		List<Items> list = null;
 		List<Reply> commentList = null;
 		RankServices services = new RankServices();
@@ -49,7 +46,6 @@ public class DetailCtrl extends HttpServlet {
 
 		request.setAttribute("list", list);
 		request.setAttribute("comment", commentList);
-//		request.getRequestDispatcher("/HTML/rank/detail.jsp").forward(request, response);
 		TilesContainer container = TilesAccess.getContainer(request.getSession().getServletContext());
 		container.render("rank.detail", request, response);
 	}

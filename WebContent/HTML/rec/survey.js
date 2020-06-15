@@ -4,11 +4,12 @@ window.addEventListener("load",function(){
     var age = main.querySelector(".matching-perfume-list.age");
     var season = main.querySelector(".matching-perfume-list.season");
     var scent = main.querySelector(".matching-perfume-list.scent");
+    var title = main.querySelector(".survey-title");
     var tag1 = null;
     var tag2 = null;
     var tag3 = null;
     var gender = location.search.substr(location.search.indexOf("?") + 8);
-
+    
     
     age.onclick=function(e){
         e.preventDefault();
@@ -17,6 +18,7 @@ window.addEventListener("load",function(){
         page.classList.remove("page");
         page.classList.add("page2");
         tag1 = e.target.innerText;
+        title.innerText="Q. 사용할 계절을 선택해주세요";
     };
 
     season.onclick=function(e){
@@ -27,6 +29,7 @@ window.addEventListener("load",function(){
         page.classList.remove("page2");
         page.classList.add("page3");
         tag2 = e.target.innerText;
+        title.innerText="Q. 좋아하는 느낌의 향을 골라주세요";
     };
 
     scent.onclick=function(e){

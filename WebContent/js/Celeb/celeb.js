@@ -10,10 +10,10 @@ window.addEventListener("load", function(){
     var gridcontainer = main.querySelector(".grid-container3")
     var shield = new Shield("#main");
     var top =true;
-	var page = 0;
-	
+   var page = 0;
+   
 //--------------------창열기-----------------------------------------
-	container.onclick = function(e){    //메인 전체 영역 클릭
+   container.onclick = function(e){    //메인 전체 영역 클릭
    if (!e.target.classList.contains("img")) return; //img를 제외한 나머지는 반응하지 않게
         description.classList.remove("d-none");
         console.log("start");
@@ -33,7 +33,7 @@ window.addEventListener("load", function(){
                         <ul class="box">
                             <li>${notices.writerId} /&#160; </li>
                             <li>${notices.regDate} /&#160; </li>
-        	   				<li>${notices.hit} views </li>
+                          <li>${notices.hit} views </li>
                         </ul>
                         <div class ="close">
                             <img class="out" src="../../images/celeb/close.png">
@@ -62,11 +62,40 @@ window.addEventListener("load", function(){
     }
 //--------------------close-----------------------------------------
     description.onclick = function(e){
-	console.log(e.target)
-	if (!e.target.classList.contains("out")) return;
+   console.log(e.target)
+   if (e.target.classList.contains("out")){
         description.classList.add("d-none");
         console.log("close");
         shield.hide();
+   }
+   else if(e.target.classList.contains("d-unlike")){
+        top=!top;
+        if(!top){
+         console.log("like1");
+         document.querySelector(".d-unlike").classList.add("d-none");
+         document.querySelector(".d-like").classList.remove("d-none");
+         
+        }
+        else{
+         console.log("unlike1");
+         document.querySelector(".d-unlike").classList.remove("d-none");
+         document.querySelector(".d-like").classList.add("d-none");
+        }
+}
+   else if(e.target.classList.contains("d-like")){
+           top=!top;
+        if(!top){
+         console.log("like");
+         document.querySelector(".d-unlike").classList.add("d-none");
+         document.querySelector(".d-like").classList.remove("d-none");
+        }
+        else{
+         console.log("unlike");
+         document.querySelector(".d-unlike").classList.remove("d-none");
+         document.querySelector(".d-like").classList.add("d-none");
+        }
+   }
+   else return;
     }
 
 //------------ onload button-----------------------------
@@ -76,33 +105,7 @@ window.addEventListener("load", function(){
         addonloadblock.style.display="block";
     }
 
-/*// //----------------------하트 관련---------------------------
-    like.onclick = function(){
-        top=!top;
-        if(!top){
-         console.log("like");
-         unlike.classList.remove("d-none");
-         like.classList.add("d-none");
-        }
-        else{
-         console.log("unlike");
-         unlike.classList.add("d-none");
-         like.classList.remove("d-none");
-        }
-    }
 
-    unlike.onclick = function(){
-        top=!top;
-        if(!top){
-         console.log("like");
-         unlike.classList.remove("d-none");
-         like.classList.add("d-none");
-         
-        }
-        else{
-         console.log("unlike");
-         unlike.classList.add("d-none");
-         like.classList.remove("d-none");
-        }
-    }*/
+
+
 });

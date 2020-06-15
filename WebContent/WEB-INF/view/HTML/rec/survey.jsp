@@ -11,7 +11,7 @@
                     <li></li>
                     <li></li>
                 </ul>
-                <div>Q. 연령대를 선택해주세요</div>
+                <div class="survey-title">Q. 연령대를 선택해주세요</div>
 
                 </div>
                 

@@ -147,6 +147,9 @@
          transform: translateY(-50%);
          mix-blend-mode: multiply; */
       }
+      .recomm-prdlist-bnt .moveBtn-pre:hover {
+      	opacity:0.5;
+      }
 
       .recomm-prdlist-bnt .moveBtn-next {
          width: 64px;
@@ -158,6 +161,9 @@
          position: absolute;
          transform: translateY(-50%);
          mix-blend-mode: multiply; */
+      }
+      .recomm-prdlist-bnt .moveBtn-next:hover {
+      	opacity:0.5;
       }
 
 
@@ -193,6 +199,9 @@
       .recomm-prd img{
          width:290px;
          height:300px;
+      }
+      .recomm-prd img:hover{
+         opacity:0.5;
       }
 	
       .recomm-prd .pName{

@@ -17,12 +17,6 @@ import com.fragrance.web.entity.Items;
 import com.fragrance.web.service.RankServices;
 
 @WebServlet("/HTML/rank/list")
-//@WebServlet(urlPatterns = {
-//		"/HTML/rank/mist",
-//		"/HTML/rank/rist",
-//		"/HTML/rank/sist",
-//		"/HTML/rank/uist",
-//		"/HTML/rank/wist"})
 public class getList extends HttpServlet {
 
 	  @Override
@@ -41,7 +35,6 @@ public class getList extends HttpServlet {
 	      RankServices service = new RankServices();
 	      List<Items> list = null;
 	      String get = request.getParameter("c");
-//	      System.out.println(get);
 	      try {
 
 	         if (get.equals("m")) {
@@ -75,7 +68,6 @@ public class getList extends HttpServlet {
 	      }
 
 	      int index = ((int) (count / 10) + 1);
-	      System.out.println(index);
 	      request.setAttribute("list", list);
 	      request.setAttribute("index", index);
 

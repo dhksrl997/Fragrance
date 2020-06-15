@@ -19,7 +19,7 @@
 					<c:forEach var="m" items="${men }" begin="0" end="0">
 						<span> <img class="img img2" src="../images/${m.img }">
 						</span>
-						<a href="rank/detail?id=${m.itemnums }"> <span
+						<a href="/HTML/rank/detail?id=${m.itemnums }"> <span
 							class="description">
 								<dl>
 									<dt>&nbsp</dt>
@@ -41,7 +41,7 @@
 					<c:forEach var="w" items="${women }" begin="0" end="0">
 						<span> <img class="img" src="../images/${w.img }">
 						</span>
-						<a href="rank/detail?id=${w.itemnums }"> <span
+						<a href="/HTML/rank/detail?id=${w.itemnums }"> <span
 							class="description">
 								<dl>
 									<dt>&nbsp</dt>
@@ -71,7 +71,7 @@
 					<c:forEach var="u" items="${unisex }" begin="0" end="0">
 						<span> <img class="img" src="../images/${u.img }">
 						</span>
-						<a href="rank/detail?id=${u.itemnums }"> <span
+						<a href="/HTML/rank/detail?id=${u.itemnums }"> <span
 							class="description">
 								<dl>
 									<dt>&nbsp</dt>
@@ -94,7 +94,7 @@
 					<c:forEach var="e" items="${etc }" begin="0" end="0">
 						<span> <img class="img" src="../images/${e.img }">
 						</span>
-						<a href="rank/detail?id=${e.itemnums }"> <span
+						<a href="/HTML/rank/detail?id=${e.itemnums }"> <span
 							class="description">
 								<dl>
 									<dt>&nbsp</dt>
@@ -147,7 +147,7 @@
 			<div>
 				<h2 class="d-none">recommend item1</h2>
 				<section class="recomm-item1">
-					<a href="rank/detail?id=${s.itemnums}"> <!--디테일페이지로--> 
+					<a href="/HTML/rank/detail?id=${s.itemnums}"> <!--디테일페이지로--> 
 					<img class="itemtag1" src="../images/main-recomm1.png" alt="추천 제품 딱지">
 						<span> 
 							<img class="itemimg" src="../images/${s.img }" alt="추천 제품">
@@ -167,7 +167,7 @@
 				<div>
 					<h2 class="d-none">recommend item2</h2>
 					<section class="recomm-item2">
-						<a href="rank/detail?id=${c.itemnums}"> 
+						<a href="/HTML/rank/detail?id=${c.itemnums}"> 
 						<img class="itemtag2" src="../images/main-recomm2.png" alt="추천 제품 딱지"> 
 						<span>
 							<img class="itemimg" src="../images/${c.img }" alt="추천 제품">
@@ -187,7 +187,7 @@
 				<div>
 					<h2 class="d-none">recommend item3</h2>
 					<section class="recomm-item3">
-						<a href="rank/detail?id=${d.itemnums}">
+						<a href="/HTML/rank/detail?id=${d.itemnums}">
 						 <img class="itemtag3" src="../images/main-recomm3.png" alt="추천 제품 딱지"> <span>
 								<img class="itemimg" src="../images/${d.img }" alt="추천 제품">
 						</span> <span class="r-description">

@@ -58,7 +58,7 @@ public class UserLoginController extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			response.sendRedirect("/HTML/index");
+			response.sendRedirect("/index");
 		} else {
 			PrintWriter out = response.getWriter();
 			out.println("<script>alert('아이디 또는 패스워드가 일치하지 않습니다.'); location.href='/login.jsp#signup';</script>");

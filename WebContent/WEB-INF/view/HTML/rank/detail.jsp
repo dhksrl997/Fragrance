@@ -8,11 +8,11 @@
                     <section class="sub-menu">
                         <h1 class="d-none">서브메뉴</h1>
                         <ul>
-                            <li><a href="list?c=m">Men</a></li>
-							<li><a href="list?c=w">Women</a></li>
-							<li><a href="list?c=u">Unisex</a></li>
-							<li><a href="list?c=s">Solid</a></li>
-							<li><a href="list?c=r">Rollerball</a></li>
+                            <li><a href="list?c=m&p=1">Men</a></li>
+							<li><a href="list?c=w&p=1">Women</a></li>
+							<li><a href="list?c=u&p=1">Unisex</a></li>
+							<li><a href="list?c=s&p=1">Solid</a></li>
+							<li><a href="list?c=r&p=1">Rollerball</a></li>
                         </ul>
                     </section>
 
@@ -29,10 +29,11 @@
 									<div class="price">${l.size }ml/ ${price }원</div>
 									<div class="like">
 										<span><img src="images/blankheart.png"
-											style="width: 40px; height: 40px;" alt=""> <span>
-												<img class="img-d-none" src="images/redheart.png"
-												style="width: 40px; height: 40px;" alt="">
-										</span> </span> ${l.maleLike+l.femaleLike }
+											style="width: 40px; height: 40px;" alt=""> 
+											<span><img class="img-d-none" src="../../images/celeb/like.png"
+												style="width: 40px; height: 40px;" alt=""></span> 
+											</span> 
+											<%-- ${l.maleLike+l.femaleLike }  --%>
 									</div>
 								</div>
 								<div class="item-info">

@@ -20,15 +20,11 @@ public class SearchServices {
 
 	public List<Items> getSearchItems(String query) throws SQLException, ClassNotFoundException {
 		List<Items> list = new ArrayList<>();
-//		String sql = "select * from Items where  name LIKE '%?%' || brand LIKE '%?%' || scent LIKE '%?%' || content LIKE '%?%' || tag LIKE '%?%';";
 		String sql = "select * from Items where name LIKE '%"+query+"%' || brand LIKE '%"+query+"%' || scent LIKE '%"+query+"%' || content LIKE '%"+query+"%' || tag LIKE '%?%'";
 		String url = "jdbc:mysql://dev.notepubs.com:9898/fragrance?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
 		PreparedStatement st = con.prepareStatement(sql);
-		System.out.println(sql);
-//		for(int i =1 ; i<=5;i++) 
-//			st.setString(i, query);
 
 		ResultSet rs = st.executeQuery();
 		while (rs.next()) {

@@ -151,20 +151,16 @@
 /*----------banner-----------------------*/
 .banner {
 	position: relative;
-	/* position: relative;
-	background: no-repeat center; */
 	height: 400px;
 	overflow: hidden;
 }
 
 .banner-slide>img {
-	width: 2000px;
+	width: 1400px;
 	height: 400px;
-	left:-1000x;
 }
 
 .banner-slide {
-	
 	margin-left: auto;
 	margin-right: auto;
 	/* background-size: contain; */
@@ -173,6 +169,7 @@
 	z-index: 0;
 	opacity: 0;
 	transition: opacity .7s ease-in-out;
+	background
 } 
 
 .showing {
@@ -182,9 +179,12 @@
 	transition: 3s;
 } 
 
+
+
+
 /*--------------테이블 영역------------------*/
 .list {
-	margin-top: 100px;
+	margin-top: 50px;
 	text-align: center;
 }
 

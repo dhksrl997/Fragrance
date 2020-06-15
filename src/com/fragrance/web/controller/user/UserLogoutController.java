@@ -17,10 +17,11 @@ import com.fragrance.web.service.user.UserServices;
 @WebServlet("/logout")
 public class UserLogoutController extends HttpServlet {
 	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 		request.getSession().invalidate();
-		response.sendRedirect("HTML/index");
+		response.sendRedirect("/index");
 
 	}
 }

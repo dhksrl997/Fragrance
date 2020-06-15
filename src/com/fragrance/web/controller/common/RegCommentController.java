@@ -29,7 +29,6 @@ public class RegCommentController extends HttpServlet {
 		int id = Integer.parseInt(request.getParameter("id"));
 		Reply reply = new Reply();
 		List<Reply> replys = null;
-		/////
 		User user =new User();
 		String comment = request.getParameter("regcomment");
 
@@ -38,7 +37,6 @@ public class RegCommentController extends HttpServlet {
 		reply.setWriterName((String)(session.getAttribute("nickName")));
 		reply.setContent(comment);
 		
-		System.out.println("작성자 이름이뭐야 : "+reply.getWriterName());
 		try {
 			service.regComment(reply);
 		} catch (ClassNotFoundException e1) {
@@ -49,8 +47,5 @@ public class RegCommentController extends HttpServlet {
 			e1.printStackTrace();
 		}
 		response.sendRedirect("detail?id="+id);
-//		TilesContainer container = TilesAccess.getContainer(
-//		        request.getSession().getServletContext());
-//		container.render("rank.detail?id="+itemnums, request, response);
 	}
 }

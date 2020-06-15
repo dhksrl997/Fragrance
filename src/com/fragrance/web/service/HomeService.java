@@ -22,7 +22,6 @@ public class HomeService {
 		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
 		PreparedStatement st = con.prepareStatement(sql);
 		ResultSet rs = st.executeQuery();
-//		st.setInt(1, (page-1)*5);
 		while (rs.next()) {
 			Items items = new Items(rs.getInt("itemnums"), rs.getString("img"), rs.getString("name"),
 					rs.getString("brand"), rs.getInt("size"), rs.getInt("price"), rs.getString("scent"),
@@ -46,7 +45,6 @@ public class HomeService {
 		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
 		PreparedStatement st = con.prepareStatement(sql);
 		ResultSet rs = st.executeQuery();
-//		st.setInt(1, (page-1)*5);
 		while (rs.next()) {
 			Items items = new Items(rs.getInt("itemnums"), rs.getString("img"), rs.getString("name"),
 					rs.getString("brand"), rs.getInt("size"), rs.getInt("price"), rs.getString("scent"),
@@ -70,7 +68,6 @@ public class HomeService {
 		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
 		PreparedStatement st = con.prepareStatement(sql);
 		ResultSet rs = st.executeQuery();
-//		st.setInt(1, (page-1)*5);
 		while (rs.next()) {
 			Items items = new Items(rs.getInt("itemnums"), rs.getString("img"), rs.getString("name"),
 					rs.getString("brand"), rs.getInt("size"), rs.getInt("price"), rs.getString("scent"),
@@ -188,7 +185,5 @@ public class HomeService {
 
 		return list;
 	}
-	
-	
 	
 }

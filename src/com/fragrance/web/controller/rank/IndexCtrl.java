@@ -57,7 +57,6 @@ public class IndexCtrl extends HttpServlet {
 		items.add(rollonlist);
 
 		request.setAttribute("items", items);
-//		request.getRequestDispatcher("/HTML/rank/rankIndex.jsp").forward(request, response);
 		TilesContainer container = TilesAccess.getContainer(
 		        request.getSession().getServletContext());
 		container.render("rank.rankIndex", request, response);
