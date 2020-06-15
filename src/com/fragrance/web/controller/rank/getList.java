@@ -41,24 +41,28 @@ public class getList extends HttpServlet {
 	            list = service.getManItems(page);
 	            count = service.getCount("남성", null);
 	         }
-	         if (get.equals("w")) {
+	         else if (get.equals("w")) {
 	            list = service.getWomenItems(page);
 	            count = service.getCount("여성", null);
 
 	         }
-	         if (get.equals("u")) {
+	         else if (get.equals("u")) {
 	            list = service.getUnisexItems(page);
 	            count = service.getCount("공용", null);
 	         }
 
-	         if (get.equals("s")) {
+	         else if (get.equals("s")) {
 	            list = service.getSolidItems(page);
 	            count = service.getCount(null, "고체");
 	         }
-	         if (get.equals("r")) {
+	         else if (get.equals("r")) {
 	            list = service.getRollItems(page);
 	            count = service.getCount(null, "롤온");
 	         }
+	         else {
+	             list = service.getSearchDetail(page,get);
+	             count = service.getSearchItemsCount(get);
+	          }
 	      } catch (ClassNotFoundException e) {
 	         // TODO Auto-generated catch block
 	         e.printStackTrace();

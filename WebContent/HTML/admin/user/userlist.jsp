@@ -18,7 +18,7 @@
 		<div id="body">
 			<main class="main">
 			                <!-- -------------aside------------------------------- -->
-                <aside id="aside">
+                 <aside id="aside">
                     <div class="left_area">
                         <h1> 관리자 홈 </h1>
 
@@ -28,12 +28,12 @@
                                 <ul class="submenu">
                                     <li><a href="../item/prdlist"> → 제품목록</a></li>
                                     <li><a href="../board/boardlist"> → 게시글목록</a></li>
-                                </ul>
+                                </ul>	
                             </section>
                             <section> 
                                 <h2 class="titmenu">회원관리</h2>
                                 <ul class="submenu">
-                                    <li><a href="userlist"> → 회원목록</a></li>
+                                    <li><a href="../user/userlist"> → 회원목록</a></li>
 
                                 </ul>
                             </section>    
@@ -47,13 +47,13 @@
                         <h1>< 회원 목록 ></h1>
                         
                         <div class="admin-btn">
-                            <div class="rightbtn2-gohome">
+                            <div class="rightbtn4-gohome">
                                 <a href="/index"><button type="submit">메인으로</button></a>  
                             </div>
                         </div>
 					<form action="userlist" method="post">
                             
-                                <input class="leftbtn3" type="submit" name="cmd" value="선택삭제">
+                                <input class="leftbtn4" type="submit" name="cmd" value="선택삭제">
                             
 
 					    <table class="prdlist-table">
@@ -81,7 +81,7 @@
                                         </td>
                                         <td>${n.userNum}</td>
                                         <td><a href="edit?id=${n.userNum}">${n.mail}</a></td>
-                                        <td>${n.pw}</td>
+                                        <td>********</td>
                                         <td>${n.nickName}</td>
                                         <td>${n.age}</td>
                                         <td>${n.gender}</td>
@@ -100,7 +100,7 @@
 
 			</main>
 
-                    <section class="pager">
+                    <section class="pager2">
                         <h1 class="d-none">페이지</h1>
                             <div>
                                     <c:set var="page" value="${(param.p==null)?1:param.p }"/>

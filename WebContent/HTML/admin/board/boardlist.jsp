@@ -47,13 +47,13 @@
                         <h1>< 게시글 목록 ></h1>
                         
                         <div class="admin-btn">
-                            <div class="rightbtn-gohome">
+                            <div class="rightbtn5-gohome">
                                 <a href="/index"><button type="submit">메인으로</button></a>  
                             </div>
                         </div>
 					<form action="userlist" method="post">
                             
-                                <input class="leftbtn3" type="submit" name="cmd" value="선택삭제">
+                                <input class="leftbtn5" type="submit" name="cmd" value="선택삭제">
                             
 
 					    <table class="prdlist-table">

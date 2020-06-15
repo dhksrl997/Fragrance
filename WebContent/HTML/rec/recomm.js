@@ -55,7 +55,7 @@ window.addEventListener("load", function() {
 	  	div[i].remove();
 	    var n = list[i];
 	    var template = `<div class="recomm-prd">
-								<a href="prd-detail?id="><img
+								<a href="/HTML/rank/detail?id=${n.itemnums }"><img
 									src="../../images/${n.img }"></a> <span class="pName">${n.name }</span>
 								<p class="pBrand">${n.brand }</p>
 							</div>`;

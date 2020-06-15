@@ -20,7 +20,7 @@ public class SearchServices {
 
 	public List<Items> getSearchItems(String query) throws SQLException, ClassNotFoundException {
 		List<Items> list = new ArrayList<>();
-		String sql = "select * from Items where name LIKE '%"+query+"%' || brand LIKE '%"+query+"%' || scent LIKE '%"+query+"%' || content LIKE '%"+query+"%' || tag LIKE '%?%'";
+		String sql = "select * from Items where name LIKE '%"+query+"%' || brand LIKE '%"+query+"%' || scent LIKE '%"+query+"%' || content LIKE '%"+query+"%' || tag LIKE '%?%' limit 3";
 		String url = "jdbc:mysql://dev.notepubs.com:9898/fragrance?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
@@ -46,7 +46,7 @@ public class SearchServices {
 
 	public List<Celeb> getSearchCeleb(String query) throws ClassNotFoundException, SQLException {
 		List<Celeb> list = new ArrayList<>();
-		String sql = "select * from Celeb where content LIKE '%"+query+"%' || title LIKE '%"+query+"%' || celeb LIKE '%"+query+"%'";
+		String sql = "select * from Celeb where content LIKE '%"+query+"%' || title LIKE '%"+query+"%' || celeb LIKE '%"+query+"%' limit 3";
 		String url = "jdbc:mysql://dev.notepubs.com:9898/fragrance?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, "fragrance", "0505");

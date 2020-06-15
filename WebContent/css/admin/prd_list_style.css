@@ -141,6 +141,52 @@
     }
     
     
+    .leftbtn4 {
+    font-size: 15px;
+    display: inline;
+    position : relative;
+    top : -34px;
+    left :0px;
+    margin-right: 5px;
+    background-color: #f3f3f3;
+    width: 90px;
+    height: 34px;
+    color: #000;
+    border: #555 1px solid;
+    }
+    
+     .leftbtn4:hover{
+     background-color: #555;
+        color: #fff;
+        font-weight: bold;
+        border: none;
+    
+    }
+    
+    .leftbtn5 {
+    font-size: 15px;
+    display: inline;
+    position : relative;
+    top : -34px;
+    left :0px;
+    margin-right: 5px;
+    background-color: #f3f3f3;
+    width: 90px;
+    height: 34px;
+    color: #000;
+    border: #555 1px solid;
+    }
+    
+     .leftbtn5:hover{
+     background-color: #555;
+        color: #fff;
+        font-weight: bold;
+        border: none;
+    
+    }
+    
+    
+    
     .leftbtn2:hover{
      background-color: #555;
         color: #fff;
@@ -164,7 +210,30 @@
     color: #fff;
     }
     
+    .rightbtn4-gohome {
+    margin-left: 1150px;
+}
+    .rightbtn4-gohome button{
+    width: 90px;
+    height: 34px;
+    right: 0;
+    background-color: #555;
+    border: none;
+    color: #fff;
+    }
     
+    
+    .rightbtn5-gohome {
+    margin-left: 1150px;
+}
+    .rightbtn5-gohome button{
+    width: 90px;
+    height: 34px;
+    right: 0;
+    background-color: #555;
+    border: none;
+    color: #fff;
+    }
     
    
         
@@ -252,7 +321,7 @@
 
 .pager{
     margin: 40px auto 80px auto;
-    width: 165px;
+    width: 50px;
 }
 
     .pager div{
@@ -300,3 +369,56 @@
         .thispage{
             font-weight: bold;
         }
+     
+        
+.pager2{
+    margin: 40px 660px 80px auto;
+    width: 270px;
+}
+
+    .pager2 div{
+        justify-content: center;
+        display: inline-flex;
+    }
+
+    .pager2 ul{
+        display: flex;
+    }
+
+        .pager2 li{
+            width:15px;
+            height: 15px;   
+            text-align: center;  
+            padding-left: 10px;
+            list-style: none;       
+        }
+
+        .pager2 .btn-prev{
+            width: 15px;
+            height: 15px;
+            background: url("../../images/btn-prev.png") no-repeat center;
+            text-indent: -999px;
+            overflow: hidden;
+            margin-top: 3px;
+        }
+ 
+        .pager2 .btn-next{
+            width: 15px;
+            height: 15px;
+            background: url("../../images/btn-next.png") no-repeat center;
+            text-indent: -999px;
+            overflow: hidden;
+            margin-left: 10px;
+            margin-top: 3px;
+        }
+
+        .pager2 a {
+            text-decoration: none;
+            color: black;
+            width:15px;
+        }
+        
+        .thispage{
+            font-weight: bold;
+        }
+        

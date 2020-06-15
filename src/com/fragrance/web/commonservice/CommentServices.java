@@ -56,5 +56,19 @@ public class CommentServices {
 		return list;
 	}
 
+	public int deleteComment(int id) throws SQLException, ClassNotFoundException {
+		int result=0;
+		String sql = "DELETE FROM reply WHERE id=?;";
+		String url = "jdbc:mysql://dev.notepubs.com:9898/fragrance?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC";
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection con = DriverManager.getConnection(url, "fragrance", "0505");
+		PreparedStatement st = con.prepareStatement(sql);
+		st.setInt(1, id);
+		result = st.executeUpdate();
+		st.close();
+		con.close();
+		return result;
+	}
+
 
 }
